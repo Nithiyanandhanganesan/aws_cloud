@@ -1,0 +1,92 @@
+Host static webpage using S3:
+=================================
+
+- can specify the index file
+- can specify the custom error file.
+- Support custom domain and redirects:
+   - s3 gives default url.
+       - <bucket-name>.s3-website-<AWS-region>.amazonaws.com
+   - we can redirect default url to custom url. (redirect .html from one bucket to another bucket)
+   - route 53 integration required redirect to custom domains.
+   - we should create both buckets .
+   - bucket name must match the domain name.
+- Upload the .html file into that bucket.
+     - index document(.html)
+     - error document(custom errors)
+     - custom redirect rules.
+     
+Steps to run static webpage in S3:
+======================================
+
+- create the three html page indix.html,error.html,welcome.html.
+- create the bucket in s3 with domain name of the webpage (eg: www.nithiy28test.com)
+- Bucket -> Properties --> Static website hosting -> select "use this bucket to host a website" -> give index.html & error.html. -> Save.
+- it will give the endpoint. eg: http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com
+- select the files in the s3 -> right click -> Make Public.
+http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com
+   - print the content in the index.html page.
+http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com/dafadsdf
+   - print the content in the error.html page.
+http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com/welcome.html
+   - print the content in the welcome.html page.
+   
+   
+Static webpage with custom redirects:
+=======================================
+- use route 53.( need to explore)
+
+
+Cross origin resource sharing:
+================================
+
+- It is used to access the webpage from present in different bucket with different aws account.
+- Access aws bucket from outside aws environment.
+
+Eg: access welcome.html from different bucket.
+
+1. Create the index.html & upload it into aws www.nithiy28test.com bucket:
+
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+this is an index file
+
+<div id="loaded_file"></div>
+<script>
+$(function() {
+    $(#"loaded_file").load("https://s3.amazonaws.com/test28nit/welcome.html");
+    });
+ </script>
+ 
+ 
+2. Place the welcome.html file into some other bucket.(test28nit) and update the url in the index.html file.
+
+3. test28nit bucket -> properties -> permissions -> cors configuration.
+
+4. Below is the default cors configuration.
+   <!-- Sample policy -->
+   <CORSConfiguration>
+   	<CORSRule>
+   		<AllowedOrigin>*</AllowedOrigin>
+   		<AllowedMethod>GET</AllowedMethod>
+   		<MaxAgeSeconds>3000</MaxAgeSeconds>
+   		<AllowedHeader>Authorization</AllowedHeader>
+   	</CORSRule>
+   </CORSConfiguration>
+
+5. We need to update the above config to read welcome.html from test28nit bucket.
+
+6. Copy the endpoint of www.nithiy28test.com bucket and place it in "allowedorigin" tag.
+
+   <!-- Sample policy -->
+   <CORSConfiguration>
+   	<CORSRule>
+   		<AllowedOrigin>http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com</AllowedOrigin>
+   		<AllowedMethod>GET</AllowedMethod>
+   		<MaxAgeSeconds>3000</MaxAgeSeconds>
+   		<AllowedHeader>Authorization</AllowedHeader>
+   	</CORSRule>
+   </CORSConfiguration>
+
+
+7. Now open the url to see the welcome.html loaded from different bucket.
+   http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com/

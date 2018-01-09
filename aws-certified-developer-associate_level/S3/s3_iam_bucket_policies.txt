@@ -1,0 +1,6 @@
+Bucket permissions:
+=======================
+
+need to explore
+ S3 IAM and Bucket Policies
+  S3 IAM and Bucket Policies examples	

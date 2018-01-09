@@ -1,0 +1,73 @@
+SNS (Simple Notification Service):
+==================================
+
+It's similar to Kafka and Pub/sub in GCP.
+Pub-sub service for messaging.
+Topic: 
+  - communication channel to send messages and subscribe to notifications.
+  - name must be unique and limited to 256 characters
+  - it should be alphanumeric. (-,_) are allowed.
+  - topic and messages are stored redundantly on multiple servers and data centers.
+  
+  
+Subscriber: 
+  - Subscribe an endpoint to a topic to receive messages published to that topic
+  - subscribe endpoints are :
+    - mobile apps
+    - web servers
+    - email address
+    - amazon sqs queue
+    - aws lambda
+    
+Publish : Publish a message to a topic or as a direct publish to a platform endpoint
+Publish text message (SMS): Publish a text message to a phone number
+
+Supported through console , api, cli and sdk.
+
+
+Hands ON:
+==========
+
+- Create topic & enter the topic name 
+- "Create Subscription" -> select the appropriate endpoints .
+- For eg: select "Email" protocol and type "email id" in the endpoint -> create subscription.
+- Login to mail and select conform subscription.
+- It will give the subscription ID.
+
+- go to "Topics" tab -> selec the topic name -> "Publish to topic" 
+- Enter the message the publish to that topic
+- AFter publish, we will get the email of that message becaz we have selected email in the subscription.
+
+
+Managing Access:
+==================
+It allows permission to who can subscribe the topic and who can publish to the topic , etc,.
+
+ - Access controlled with policies.
+ - SNS has its own permissions system based on IAM
+ - integrates with IAM for control over your user's permissions.
+ 
+Access control policies:
+------------------------
+
+ - only account owner has permission by default.
+ - allows override default denies.
+ - explicit denies overrde allows.
+ - order of policies does not matter	
+ - grant access to sns topic to another aws account. Use SNS api  "AddPermission" to achieve this.
+ - Pass in the : topic, aws account id, actions , label. Amazon automatically generated the access control policy.
+ 
+IAM policies:
+---------------
+
+ - control access for our own users.
+ - IAM policy cant grant access to other aws account
+ - can be generic or more specific.
+ - can use IAM and access control policies at the same time.
+ - IAM grant temporary security credentials.
+ 
+SNS with SQS:
+=======================
+
+
+

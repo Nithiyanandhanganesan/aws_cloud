@@ -1,0 +1,6 @@
+s3 iam & bucket policy
+boto3 python script.	
+
+dynamodb throughput of secondary index
+amazon cognito
+

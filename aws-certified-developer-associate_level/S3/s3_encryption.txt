@@ -1,0 +1,47 @@
+Data protection using encryption:
+===================================
+
+Data in-transit:
+-------------------
+  - using ssl or client side encryption. 
+  client -> encryption -> s3 -> save to disk
+  
+Method 1:(client side encryption)
+  - using an AWS KMS(key managed system)-managed customer master key(CMK). Client get unique encryption key for each object.
+  - On Upload
+     - client send request to aws KMS for a key.
+     - AWS KMS returns an encryption key.(plain text for encryption & ciphor blod to upload to s3 as object metadata)
+  - On Download
+     - Client download encrypted object from s3 with the ciphor blob stored in the metadata.
+     - client send the cipher blob to AWS KMS to get the plain text.
+     - plain text is used to decrypt the data.
+
+Method 2:(client side master key)
+  - using a client side master key. Master keys and unencrypted data are never sent to aws.
+  - On upload
+     - client provides master key to s3 encryption client.
+     - s3 client generates a randon data key and encryptes with master key.
+     - s3 client encyptes data using data key and upload description as part of object metadata.
+  - On Download
+     - client download encrypted object with metadata.
+     - metadata tells which master key to use to decrypt.
+     - using master key , client decrypts the data key.
+     - that datakey  is used to decrypt the object.
+
+Data at rest:
+------------------
+  - request s3 to encrypt the objects.
+  client -> s3 -> encryption -> save to disk
+  
+  - s3 provides server side encryption while saving data to disk.
+  - add "x-amz-server-side-encryption" request header to upload request.
+  - uses "AES-256" (Advanced Encryption Standard)
+  
+  - Also, we can use KMS- managed encryption keys and customer provided encryption keys.
+  
+  
+Setup encryption for the object:
+=====================================
+
+While uploading files into the S3, in Properties -> Encryption -> select Amazon S3 master Key
+

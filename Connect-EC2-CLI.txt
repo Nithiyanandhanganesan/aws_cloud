@@ -1,0 +1,10 @@
+Windows:
+================
+
+- Launch the instance in the AWS console.
+- Download pem file before launching ec2 instance.
+- Install Putty & Puttygen.
+- Open Puttygen and select "load" and open the pem file.
+- select "Save as Private Key" and save it as .ppk(puty protected file) file in your machine.
+- Open Putty and enter  "user_name@public_dns" and expand "SSH" and select "Auth" and using browse option select the generated ppk file.
+- select "Open", now it will be connected to the ec2 instance.

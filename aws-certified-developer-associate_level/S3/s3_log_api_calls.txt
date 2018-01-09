@@ -1,0 +1,37 @@
+Logging api calls:
+=======================
+
+Many people uses the aws resource. We need to track who accessed the what resource.
+We can store the logs in S3 buckets.
+
+
+CloudTrail:
+==============
+
+With CloudTrail, you can view events for your AWS account. Create a trail to retain a record of these events. With a trail, you can also create event metrics, trigger alerts, and create event workflows.
+
+
+Steps to create CloudTrail:
+================================
+
+- Create Tail.
+- Enter the required information
+- Click "Create"
+
+
+Select the "Event History" and see the recent events.
+Logs will also be placed the buckets created in the CloudTrail.
+All the events happened in the aws will be tracked.
+It may take ~5 minutes to update the events in CloudTrail.
+
+It Logs only the bucket action not the object action.
+To see the object action, we need to use Server Access logs.
+
+Server access Logs:
+=====================
+
+- Select the Buckets -> Properties -> Server Access Logging -> Enable Logging -> Save
+
+It will take 1 hour ,to place the server access logs into that bucket.
+
+
