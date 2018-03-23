@@ -14,11 +14,11 @@ Host static webpage using S3:
      - index document(.html)
      - error document(custom errors)
      - custom redirect rules.
-     
+
 Steps to run static webpage in S3:
 ======================================
 
-- create the three html page indix.html,error.html,welcome.html.
+- create the three html page index.html,error.html,welcome.html.
 - create the bucket in s3 with domain name of the webpage (eg: www.nithiy28test.com)
 - Bucket -> Properties --> Static website hosting -> select "use this bucket to host a website" -> give index.html & error.html. -> Save.
 - it will give the endpoint. eg: http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com
@@ -29,8 +29,8 @@ http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com/dafadsdf
    - print the content in the error.html page.
 http://www.nithiy28test.com.s3-website-us-west-1.amazonaws.com/welcome.html
    - print the content in the welcome.html page.
-   
-   
+
+
 Static webpage with custom redirects:
 =======================================
 - use route 53.( need to explore)
@@ -56,8 +56,8 @@ $(function() {
     $(#"loaded_file").load("https://s3.amazonaws.com/test28nit/welcome.html");
     });
  </script>
- 
- 
+
+
 2. Place the welcome.html file into some other bucket.(test28nit) and update the url in the index.html file.
 
 3. test28nit bucket -> properties -> permissions -> cors configuration.

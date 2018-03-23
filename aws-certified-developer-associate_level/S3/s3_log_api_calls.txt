@@ -8,8 +8,12 @@ We can store the logs in S3 buckets.
 CloudTrail:
 ==============
 
-With CloudTrail, you can view events for your AWS account. Create a trail to retain a record of these events. With a trail, you can also create event metrics, trigger alerts, and create event workflows.
+With CloudTrail, you can view events for your AWS account.
+Create a trail to retain a record of these events. With a trail, you can also create event metrics, trigger alerts, and create event workflows.
 
+We can see all the user activities in the logs. Using cloudwatch with clould filter , we can filter the logs.
+CloudTrail will have logs only at bucket level, It will have any info if there is any change in the objects.
+To, track the logs at object level, we have to use "Server Access Logs"
 
 Steps to create CloudTrail:
 ================================
@@ -33,5 +37,3 @@ Server access Logs:
 - Select the Buckets -> Properties -> Server Access Logging -> Enable Logging -> Save
 
 It will take 1 hour ,to place the server access logs into that bucket.
-
-

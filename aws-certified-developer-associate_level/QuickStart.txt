@@ -1,0 +1,50 @@
+SNS (Simple Notification Service):
+    It's Notification service in aws. Its similar to kafka & Pub-Sub in Google cloud.
+    Its Pub sub message services
+    Supported through console, api, cli.
+
+
+Use case:
+   Fanout scenario:
+       -  message sent to topic and pushed to multiple endpoints.
+       -  allows parallel sync process
+
+Publishers:
+  - control access like which publisher can publish the message
+
+Topic:
+    - publish the messages,
+    - subscriber consumes the messages from the topic.
+    - names must be unique
+    - limited to 256 characters
+    - alpha numeric , - & _ are allowed
+    - topics and messages are redundantly stored in multiple data centers.
+
+Subscribers:
+  - subscribe to the topic to receive the message
+  - endpoints -> mobile apps, web apps, email, sql , lambda
+
+QuickStart:
+ -> SNS
+ -> Create new Topic
+ -> Enter the topic name and "create topic"
+ -> Create subscription
+      -> select protocol (email)
+      -> end point as email id.
+      -> you will get email. confirm subscription in the email.
+ -> Public to Topic
+      -> enter the details & "Publish message"
+
+Managing Access:
+====================
+
+Access control policy
+  - grant access to sns topic to another aws account using SNS api action "AddPermission"
+  - pass topic, aws account id, action, label
+  - aws automatically generates the policy.
+
+IAM:
+  - give access to own Users
+  - provide the temporary security credentials
+
+  

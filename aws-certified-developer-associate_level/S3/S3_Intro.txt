@@ -11,7 +11,7 @@ Objects:
 =============
 In cloud, all folder and files under the buckets are referred as objects.
 Maximum size of the objects can be 5 TB.
-Objects larger than 5 gb require multiplart upload API.
+Objects larger than 5 gb require multipart upload API.
   - break the object and upload independently and in parallel.
   - if any part failed, we are retransmit only the failed part.
   - object can be reassembled after calling CompleteMultiPartUpload API.
@@ -30,14 +30,14 @@ S3 Performance:
 - s3 maintains the index of object key names in each aws region.
      - object keys are stored across multiple partitions in that index.
      - key name is used to decide which partition the key is stored in.
-     - similiar object keys are stored in the same partitions. So, to avoid skewness in one partition, prefix some random number the object name.
+     - similar object keys are stored in the same partitions. So, to avoid skewness in one partition, prefix some random number the object name.
 
 - get request intensive workloads.
      - use cloudfront.
-     - distributes content near to user whihc gives low latency and high transfer rate.
+     - distributes content near to user which gives low latency and high transfer rate.
      - catches object
      - fewer direct requests to s3.
-     
+
 - scale to very high request rates.
 - Burst in the number of request per second
     - >=300 put/list/delete
@@ -46,14 +46,13 @@ S3 Performance:
 - need to consider the consistent high number of request per second when 
     - >=100 put/list/delete
     - >=300 get
-    
-    
+
+
 S3 Error Handling:
 ======================
 
 404 - not found
 403 - forbidden
-400 - bad request 
+400 - bad request
 409 - conflict
-500 - internal server error	
-
+500 - internal server error
