@@ -1,0 +1,159 @@
+1) You have reached your account limit for the number of CloudFormation stacks in a region. How do you increase your limit?
+
+Incorrect
+
+Correct answer
+Contact AWS
+
+Explanation
+The limit for CloudFormation stacks in a single region is 200. However, this limit can be increased by contacting AWS.
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/121/lesson/3/module/11
+
+2) You are writing an AWS CloudFormation Template to create a static S3 website configuration. The resources section of this template will be used for access control of the bucket and is defined in the 5th line of the below code snippet. What should the value of "AccessControl" be so that the owner of the bucket gets full control and all users get READ access only. "Resources" : { "S3Bucket" : { "Type" : "AWS::S3::Bucket", "Properties" : { "AccessControl" : "ANSWER TO THE QUESTION", "BucketName": { "Ref" : "BucketName" }, "WebsiteConfiguration" : { "IndexDocument" : "index.html", "ErrorDocument" : "error.html" } } }
+
+Correct
+
+Correct answer
+PublicRead
+
+3) Which command line commands list all current stacks in your CloudFormation service?
+
+Partially Correct
+
+Correct answer
+cfn-describe-stacks, cfn-list-stacks
+
+Explanation
+The cfn-describe-stacks command line command will list all current stacks in CloudFormation. Taking the same naming convention you'd find that the "core" query API call to list all stacks would be DescribeStacks. The cfn-list-stacks will also return a list of our stacks, with the option to filter through different stacks statuses. Please note: 'cfn-' has been deprecated. The new naming convention would be 'describe-stacks' and 'list-stacks' instead. We are leaving this here because you are still likely to see the deprecated naming convention on the exam.
+
+4) You are writing an AWS CloudFormation template and you want to assign values to properties that will not be available until runtime. You know that you can use intrinsic functions to do this but are unsure as to which part of the template they can be used in. Which of the following is correct in describing how you can currently use intrinsic functions in an AWS CloudFormation template?
+
+Correct
+
+Correct answer
+You can only use intrinsic functions in specific parts of a template. You can use intrinsic functions in resource properties, metadata attributes, and update policy attributes.
+
+5) What result would you expect from the Fn::Join function in the following line in a CloudFormation template? "Fn::Join" : [ "/", [ "list-a","list-b","list-c"] ]
+
+Correct
+
+Correct answer
+list-a/list-b/list-c
+
+Explanation
+The intrinsic join function will join together the [ "list-a","list-b","list-c"] fragments, separating each fragment with the specified delimiter "/"
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/121/lesson/1/module/11
+
+6) The following code snippet is the resources section of a CloudFormation template that you have written. "Resources" : { "EC2Instance" : { "Type" : "AWS::EC2::Instance", "Properties" : { "InstanceType" : { "Ref" : "InstanceType" }, "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ], "KeyName" : { "Ref" : "KeyName" }, "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" }, { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "InstanceType" }, "Arch" ] } ] } } }, You have used the reference function to define your instance type as follows. "InstanceType" : { "Ref" : "InstanceType" }, The referencing function is referencing the instance type. Where is this value most likely coming from?
+
+Correct
+
+Correct answer
+From the parameters section of your CloudFormation template.
+
+Explanation
+The InstanceType is most likely a parameter, which means whoever uses the template can decide what instance type to use at template creation time. Here is an example of what that might look like: "Parameters" : { "InstanceType" : { "Description" : "WebServer EC2 instance type", "Type" : "String", "Default" : "t2.small", "AllowedValues" : [ "t1.micro", "t2.nano", "t2.micro", "t2.small"], "ConstraintDescription" : "must be a valid EC2 instance type." }, }
+
+7) The template description declaration cannot be added if the AWSTemplateFormatVersion is not declared at the top of the template.
+
+Incorrect
+
+Correct answer
+True
+
+Explanation
+The description and template format declarations are not required on the template. However, if you are to use the description declaration the AWSTemplateFormatVersion must be declared at the top of the template.
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/121/lesson/3/module/11
+
+8) In addition to CloudFormation Syntax and Functions, you need to be familiar with the available CLI commands and API calls.
+
+Correct
+
+Correct answer
+True
+
+9) The following code snippet is the parameters section of a CloudFormation template that you have written. "Parameters" : { "KeyName": { "Description" : "answer to the question", "Type": "AWS::EC2::KeyPair::KeyName", ... } } Which of the the following is the best description of what this section will do once you run your CloudFormation template?
+
+Correct
+
+Correct answer
+It will ask you to provide the name of an existing EC2 KeyPair to use.
+
+Explanation
+Before launching the creation of our CloudFormation template, CloudFormation will ask us to choose an existing keypair name to associate with our ec2 instance(s). This Parameters section allows us to do that.
+
+10) fn:GetAtt is used on a CloudFormation template to:
+
+Correct
+
+Correct answer
+Return the value of an attribute from a resource on the template
+
+Explanation
+fn:GetAtt is an intrinsic function. Intrinsic functions pass are used to grab data that is only available at stack runtime.
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/121/lesson/1/module/11
+
+11) Which API call is used to list all resources that belong to a CloudFormation Stack?
+
+Incorrect
+
+Correct answer
+ListStackResources
+
+Further Reading
+http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListStackResources.html
+
+12) In AWS CloudFormation, the intrinsic function Fn::Join appends a set of values into a single value, separated by the specified delimiter. If a delimiter is the empty string, the set of values are concatenated with no delimiter. Keeping the above in mind what value will the following example return? "Fn::Join" : [ "-", [ "the", "linux", "academy" ] ]
+
+Correct
+
+Correct answer
+the-linux-academy
+
+13) Explain what the following resource in a CloudFormation template does. Choose the best possible answer. "SNSTopic" : { "Type" : "AWS::SNS::Topic", "Properties" : { "Subscription" : [{ "Protocol" : "sqs", "Endpoint" : { "Fn::GetAtt" : [ "SQSQueue", "Arn" ] } }] }
+
+Incorrect
+
+Correct answer
+Creates an SNS topic and adds a subscription ARN endpoint for the SQS resource created under the logical name SQSQueue
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/121/lesson/1/module/11
+
+14) AWSTemplateFormatVersion declaration is required for the template to work inside CloudFormation.
+
+Correct
+
+Correct answer
+False
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/121/lesson/3/module/11
+
+15) What is the default behavior of a CloudFormation stack if creation fails?
+
+Correct
+
+Correct answer
+Rollback
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/121/lesson/3/module/11
+
+16) Of the 6 available sections on a CloudFormation template (Template Description Declaration, Template Format Version Declaration, Parameters, Resources, Mappings, Outputs), which is the only one required for a CloudFormation template to be accepted?
+
+Correct
+
+Correct answer
+Resources
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/121/lesson/3/module/11

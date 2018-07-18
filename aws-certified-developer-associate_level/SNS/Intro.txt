@@ -37,7 +37,7 @@ Hands ON:
 - Login to mail and select conform subscription.
 - It will give the subscription ID.
 
-- go to "Topics" tab -> selec the topic name -> "Publish to topic"
+- go to "Topics" tab -> select the topic name -> "Publish to topic"
 - Enter the message the publish to that topic
 - AFter publish, we will get the email of that message becaz we have selected email in the subscription.
 
@@ -55,7 +55,7 @@ Access control policies:
 
  - only account owner has permission by default.
  - allows override default denies.
- - explicit denies overrde allows.
+ - explicit denies override allows.
  - order of policies does not matter
  - grant access to sns topic to another aws account. Use SNS api  "AddPermission" to achieve this.
  - Pass in the : topic, aws account id, actions , label. Amazon automatically generated the access control policy.
@@ -68,6 +68,3 @@ IAM policies:
  - can be generic or more specific.
  - can use IAM and access control policies at the same time.
  - IAM grant temporary security credentials.
-
-SNS with SQS:
-=======================

@@ -1,0 +1,93 @@
+1) Your application utilizes Amazon S3 reduced redundancy storage and you have configured the s3:ReducedRedundancyLostObject notification on your Amazon S3 Bucket. What services might you use to create a "distributed" platform that replaces lost RRS objects on Amazon S3 automatically?
+
+Incorrect
+
+Correct answer
+SNS with SQS subscription endpoint with a worker instance
+
+Explanation
+The s3:ReducedRedundancyLostObject can send a notification to a specified SNS topic. Using that topic and SQS as a subscription end point allowing the lost object message to wait inside of a queue until a worker instance retrieves the message from the queue and recreates the original object that was lost.
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/120/lesson/6/module/11
+
+2) Amazon Simple Notification Service (Amazon SNS) provides support for delivery of message attributes to Amazon SQS endpoints and each message attribute consists of the following items: Name, Type and Value. Which of the following is TRUE, regarding message attributes?
+
+Correct
+
+Correct answer
+Name, type, and value must not be empty or null and the message body shouldn't be empty or null either.
+
+3) Describe the process of registering a mobile device with SNS push notification service using GCM.
+
+Correct
+
+Correct answer
+Submit GCM notification credentials to Amazon SNS, then receive the Registration ID for each mobile device. After that, pass the device token to SNS, and SNS then creates a mobile subscription endpoint for each device and communicates with the GCM service on your behalf
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/120/lesson/5/module/11
+
+4) Regarding the evaluation logic when managing Access to Your Amazon SNS Topics, the following things can be stated. The goal at evaluation time is to decide whether a given request should be allowed or denied. The evaluation logic follows several basic rules: - By default, all requests to use your resource coming from anyone but you are denied - An allow overrides any default denies - An explicit deny overrides any allows - The order in which the policies are evaluated is not important - A policy results in a default deny if it doesn't directly apply to the request. Keeping the above in mind, what will be the policy result, if a user requests to use Amazon SNS, but the policy on the topic doesn't refer to the user's AWS account at all?
+
+Correct
+
+Correct answer
+A default deny
+
+5) Which of the following would you expect to see in the body of an SNS notification?
+
+Correct
+
+Correct answer
+UnsubscribeURL
+
+6) A core benefit of using a SQS subscription endpoint with Amazon SNS is that SNS Messages can be delivered to applications that require immediate notification of an event and messages are also persistent in an Amazon SQS queue for other applications to process later in time.
+
+Correct
+
+Correct answer
+True
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/120/lesson/3/module/11
+
+7) What is the main advantage of using Amazon SQS?
+
+Correct
+
+Correct answer
+SQS is used by distributed applications and can be used to decouple sending and receiving components without requiring each application component to be concurrently available
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/150/lesson/1/module/11
+
+8) Which of the following would you not expect to see in an SNS message body?
+
+Correct
+
+Correct answer
+SubjectId
+
+Further Reading
+https://linuxacademy.com/cp/courses/lesson/course/120/lesson/4/module/11
+
+9) You have just set up a push notification service to send a message to an app installed on a device with the Apple Push Notification Service. It seems to work fine. You now want to send a message to an app installed on devices for multiple platforms, those being the Apple Push Notification Service(APNS) and Google Cloud Messaging for Android (GCM). What do you need to do first for this to be successful?
+
+Correct
+
+Correct answer
+Get a set of credentials in order to be able to connect to the push notification service you are trying to setup.
+
+Explanation
+To use Amazon SNS mobile push notifications, you need to establish a connection with a supported push notification service. This connection is established using a set of credentials.
+
+10) You have developed an application that sends an Amazon SNS message to a topic whenever an order is placed for one of your products on an online store you have just created. Any Amazon SQS queues that are subscribed to that topic would receive identical notifications when a new order is placed. This method of message deliver is called the "fanout" scenario. Which of the below descriptions is the closest in describing the common attributes of this scenario?
+
+Correct
+
+Correct answer
+The Amazon SNS message is sent to a topic and then replicated and pushed to multiple Amazon SQS queues, HTTP endpoints, or email addresses, which allows for parallel asynchronous processing.
+
+Explanation
+The "fanout" scenario lets us publish a single message to multiple different endpoints, and those endpoints can process the messages in different ways--all of this, in parallel. Note: There are no duplicate answers here. One has "synchronous" while the other has "asynchronous" processing. I know, this is overly tricky, but I want to make sure students pay very close attention to keywords in the AWS exam.

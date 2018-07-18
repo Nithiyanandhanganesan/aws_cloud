@@ -1,2 +1,20 @@
 SNS with SQS:
 =======================
+
+Use case:
+  - Push one message to one topics  and send it to multiple subscribers.
+
+
+- Create two queue in sqs
+   - Enter the queue name & "Create Queue"
+   - Queue Actions -> Subscribe to sns topic
+
+- IAM
+   - create user
+   - Attach the policy "AmazonSNSFullAccess"
+   - add the user to the credentials file
+   - aws configure la
+
+aws sns list-topics --profile la
+
+aws sns publish --topic-arn "arn:aws:sns,......" --message "heloo"  --subject "hi"

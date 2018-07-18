@@ -1,0 +1,43 @@
+SNS message data:
+
+ - JSON formatted key value pairs.
+ - POSTS to https end point with specific headers
+ - allow developers to verify authenticity of the messages
+
+ Message Data:
+
+  - message
+  - MessageID
+  - Signature
+  - SignatureVersion
+  - SigningCertURL
+  - subject
+  - Timestamp
+  - TopicARN
+  - type
+  - UnsubscribeURL
+
+Each message attribute shoud have
+ - names
+ - type
+ - value
+
+
+ Mobile Push with SNS :
+ ======================
+
+ - SNS provides ability to send notifications directly to the apps on mobile devices.
+ - notifications sent to mobile apps have ability to appear as
+   -  message alerts
+   -  badge alerts
+   -  sound alerts
+
+Push notifications services:
+   -  Amazon devices messaging (ADM)
+   -  Apple push notifications services (APNS)
+   -  Baidu cloud push
+   - Google cloud messaging for android
+   - Microsoft push notifications for Windows phone
+   - Windows push notifications services
+
+Refer image for push notifications process.

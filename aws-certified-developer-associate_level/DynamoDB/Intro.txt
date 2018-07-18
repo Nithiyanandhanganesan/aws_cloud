@@ -4,7 +4,7 @@ DynamoDB:
 - Amazon's fully managed proprietary NoSQL DB.
 - We cannot create database. We can create only tables. Also, we dont have to specify the schema while creating the table.
 - While creating the table, will give the table name and specify the partition key and sort key for that table.
-- If we have same value for partition key , then using Sort Key data will be sorted and stored in DB.
+- If we have same value for partition key, then using Sort Key data will be sorted and stored in DB.
 - Combination of partition key and sort key forms the primary key.
 
 - We can either scan the full table or query the table.
@@ -29,18 +29,20 @@ Features:
 Local secondary indexes and global secondary indexes:
 =======================================================
 
+We don't have to insert records to index. insert only to the table and aws will sync the data with index.
 Local:
 --------
  - It should have same partitions key but different sort key.
  - At the max we can have only 5 different sort key in local index.(totally 6)
  - Read and write capacity will be same as original table.
- - local index can be created only on the new table not on the existing table.	
- 
+ - local index can be created only on the new table not on the existing table.
+
 Global:
 ---------
  - We can have any key as partitions key and sort key.
  - Read and write capacity will vary for each global index.
  - At the max we can have only 5 different sort key in global index.
+ - supports only eventual consistent read.
 
 Projected Attributes:
 ======================
@@ -85,7 +87,7 @@ DynamaDB table throughput is depends on the read and write capacity.
 Unit of read capacity:
  - 1 strongly consistent or 2 eventually consistent reads per second for items as large as 4 Kb
  - Each read capacity can handle upto 4 Kb of data.
- 
+
 Unit of write capacity:
  - 1 write per second for items upto 1 Kb.
  - Each write capacity can handle upto 1 Kb of data
@@ -110,17 +112,17 @@ Calculating write capacity:
  - Round item upto nearest 1Kb multiplier
  - Formuls
     - (ITEM SIZE (rounded to nearest 1 Kb multiplier) / 1 Kb)* no. of items
- 
+
  - Eg
    - Item size = 1.5 Kb
    - 10 items per second. How many write capacity required?
    - (2 /1 )*10 = 20
    - 20 write capacity is required to write 10 items per second.
-   
+
 Calculating througput based on local secondary index:
 ------------------------------------------------------
 
-Read: 
+Read:
  - uses same read/write capacity from the parent table.
  - If we read only index keys and projected attributes , then calculation is same as read capacity.
  - If queried attributes are not projected attributes or keys, then we get extra latency and read capacity cost.
@@ -129,7 +131,7 @@ Write:
  - write a new item or update the existing item, costs one write operation to put item on the index.
  - if you change the value of indexed keyed attribute, two write required. (one to delete & one to add)
  - if an update delete an item that was in the index, one write is required to delete the item in the index.
- 
+
 Calculating througput based on global secondary index:
 ------------------------------------------------------
 
@@ -140,15 +142,15 @@ Read:
 
 Write:
  - add, update, delete consumes index write capacity units.
- 
- 
+
+
 Exceeding throughput:
 -----------------------
  - request exceeding the allocated throughput may be throttled.
  - with global secondary index, all index must have enough write capacity or the write might get throttled.
- 
- 
- 
+
+
+
 Query vs Scan API calls:
 ===========================
 
@@ -164,10 +166,10 @@ Scans:
 --------
  - read every item in the table is operationally inefficient.
  - looks for all item and attributes in a table by default.
- 
+
  - it can apply filter to the result set.
  - return only specific attributes with ProjectionExpression parameter.
- 
+
  - larger the dataset, higher the latency.
  - more filters slowers the performance.
  - only eventual consistent read are available.
@@ -176,12 +178,12 @@ Conditional Write and atomic counters:
 =========================================
 
 Atomic Counters:
------------------	
+-----------------
  - increment or decrement the value of an attribute without inferring with other write request.
  - request are applied in the order it received.
  - updates are not idompotent. (update the value each time it is called)
  - use case: increasing view count
- 
+
 Conditional Writes:
 -------------------
  - helps coordinates writes
@@ -189,4 +191,3 @@ Conditional Writes:
  - supported for putitem, deleteitem, updateitem.
  - specify condiditon in "ConditionalExpressions" ( contain attributes names, conditional operators and built in functions)
  - failed conditional write returns "ConditionalCheckFailedException"
-

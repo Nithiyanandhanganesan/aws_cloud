@@ -19,7 +19,7 @@ IAM Hands-on:
 - "Create Role"
 - Select appropriate permission policies for that role.
 - Enter role name & select create role.
- 
+
 - Launch the EC2 instance and select the created IAM role while initiating the ec2 instance.
 - SSH into the ec2 instance.
 - sudo yum update
@@ -50,7 +50,7 @@ can have temporary access keys which can expire.
 Useful for connecting outside from aws.
 
 
-- Go to IAM console. 
+- Go to IAM console.
 - In Users page, Select "Add Users" and create users with appropriate permissions.
 - Make sure you select the " generate program access secret key" check box.
 
@@ -63,3 +63,33 @@ s3=session.resource('s3')
 s3.create_bucket(Bucket='myunique28testbucket')
 
 
+Role arn format :
+  arn::aws::iam::89798798:rold/ec2-admin
+
+
+Common Request Headers
+  Authorization
+  Content-Length
+  Content-Type
+  Content-MD5
+  Date
+  Expect
+  Host
+  x-amz-content-sha256
+  x-amz-date
+  x-amz-security-token
+
+Common response Headers
+  Content-Length
+  Content-Type
+  Connection
+  Date
+  ETag
+  Server
+  x-amz-delete-marker
+  x-amz-id-2
+  x-amz-request-id
+  x-amz-version-id
+
+
+  explicit deny always overrides default allow.

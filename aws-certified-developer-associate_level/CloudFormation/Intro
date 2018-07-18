@@ -1,0 +1,29 @@
+CloudFormation allows to create and provision resource in a reusable template fashion.
+  - turns resources into stacks that work as units
+  - control your infrastructure
+  - templates are json compatible.
+  - version control of template
+
+CloudFormation template:
+  - AWStemplateFormatVersion    - which template you want to use.
+  - Description                 - Description helps to understand the templates.
+  - Metadata                    - details about the template
+  - Parameters                  - value you can pass in right before template creation. allows you to customize templates. have default as well as allowed values.
+  - Mappings                    - maps key to values
+  - Conditions                  -
+  - resources                   - this is where we create the resource [ required section]
+  - outputs                     - output values from console or api calls.
+
+resources is mandatory. remaining is optional.
+
+Intrinsic functions
+   - used to pass in values that are not available until run time.
+   - eg: Fn::GetAtt
+   - Fn:FindInMap - returns the value of a key from specified mapping.
+   - Fn::Join - concatenate elements , separated by specified delimiter.
+   - Ref - return the resource or value based on the logical name or parameter.
+   - Fn:GetAZs - Get the availability zone for specified region.
+   - Fn::Select - return the single object from a list of objects by index.
+
+
+AWS::aws-product-name::data-type-name

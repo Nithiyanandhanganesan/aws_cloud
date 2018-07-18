@@ -1,0 +1,48 @@
+VPS resembles
+  - private data centres
+  - private corporate network
+
+Private network
+  - public and private subnets
+  - scalable infrastructure
+
+vpc benefits:
+  - refer vpc_benefits.png
+
+Diff between default & non-default vpc:
+  - refer default_vpc.png & non_default_vpc.png
+
+VPC peering
+  - vpc_peering.png
+  - vpc_scenarios.png
+  - vpc limits.png
+
+Building a Non-Default VPC:
+===========================
+
+
+
+
+VPC Networking:
+================
+  - vpc_networking.png
+
+VPC Security:
+================
+  - vpc_Security.png
+
+Configuring NAT Instance:
+=========================
+  - NAT allows private network to connect to internet.
+  -
+
+DB subnet groups:
+  - control the access to database using vpc private subnet.
+  - RDS & create subnet and map.
+
+Elastic IP and elastic network interfaces:
+  -
+
+private subnet instance to connect to open network use NAT instance. [ only download not upload]
+use internet gateways and assign elastic ip address to make our instance publicly available(both download and upload.)
+one route table per subnet.

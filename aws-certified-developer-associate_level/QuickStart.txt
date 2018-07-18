@@ -4,10 +4,7 @@ SNS (Simple Notification Service):
     Supported through console, api, cli.
 
 
-Use case:
-   Fanout scenario:
-       -  message sent to topic and pushed to multiple endpoints.
-       -  allows parallel sync process
+
 
 Publishers:
   - control access like which publisher can publish the message
@@ -46,5 +43,3 @@ Access control policy
 IAM:
   - give access to own Users
   - provide the temporary security credentials
-
-  

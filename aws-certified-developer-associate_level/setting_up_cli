@@ -1,0 +1,16 @@
+brew install awscli
+mkdir .aws
+create user in aws and get the credentials and add the credentials in the below file
+vi .aws/credentials
+
+[la]
+aws_access_key_id = AKIAJIDL22FHSJANBW4Q
+aws_secret_access_key = $uA@H'8cf|Mw
+
+
+save and close the file.
+
+
+aws configure --profile la
+
+press enter to go with the default option

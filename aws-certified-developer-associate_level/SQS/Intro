@@ -1,0 +1,20 @@
+SQS:
+  - scalable messaging queue services
+  - queues stores messages that travel between different component of application.
+  - components are loosely coupled for high availability, reliability and scalability.
+  - protection against loosing data on application failure.
+
+SQS <- pulling mechanism
+SNS <- push mechanism
+
+Features:
+  - refer features.png
+
+Message Lifecycle:
+  - refer Lifecycle.png
+
+Long vs short polling:
+  - refer long_Vs_short_polling.png
+
+Limitation:
+  - refer terms_limitations.png

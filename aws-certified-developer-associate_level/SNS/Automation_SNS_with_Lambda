@@ -1,0 +1,11 @@
+Reduced Redundancy Storage:
+  - more likely to loose objects
+  - low cost
+  - use only for non critical Data
+
+-> Open S3 -> Upload image -> right click image -> properties -> Storage Class -> select "reduced Redundancy"
+
+
+To automate the process , i.e when user uploads image automatically change the storage to reduced Redundancy, we are going to use Lambda.
+
+Lambda -> Create new function

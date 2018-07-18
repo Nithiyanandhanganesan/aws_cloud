@@ -1,0 +1,39 @@
+Storage:
+  - S3
+    - high availability & scalability
+    - object Storage from 0 to 5 terabytes
+    - multipart upload
+    - versioning, lifecycle policies
+    - encryption , signed url/cdn
+  - Glacier
+    - archiving long term data
+    - slow retrieval
+    - lower cost
+  - Amazon EBS volumns
+    - elastic block Storage
+    - block level storage for ec2 Instance
+    - persist data independently of instances.
+    - can be encrypted
+    - use magnetic volumns , ssd
+  - Instance store
+    - temporary block level storage for ec2 instances
+    - disk physically attached to host computer
+  - Database Storage
+    - DynamoDB
+    - RDS
+    - Database on EC2
+  - In memory caching
+    - Elasticache (Memcache and redis)
+    - software on EC2
+  - Amason Redshift
+    - warehouse
+    - data analysis
+  - SQS
+    - message queue service
+    - polled for messages for applciation or services.
+
+
+infrastructure:
+  - Region
+  - availability Zone [ datacenter]
+  - Edge locations.

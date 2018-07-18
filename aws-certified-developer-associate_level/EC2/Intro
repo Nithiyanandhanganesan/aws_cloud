@@ -1,0 +1,34 @@
+EC2 Instance option:
+  - on-demand
+  - reserved
+  - spot instances
+  - free tier
+
+Instance size:
+  -  micro
+  - small
+  - large
+  - medium
+
+Instance types:
+  - general purpose
+  - compute optimised
+  - memory optimised
+  - GPU
+  - storage optimized
+
+pricing:
+  -  data transfer
+  - Storage
+  - compute
+  - elastic ip
+  - monitoring
+  - elastic load balancer
+  - free tier
+
+EC2
+  - each instance is assigned with public & private ip address, public cname
+
+Maintaining session state on ELB(elastic load balancer):
+  - session are stores as file based session
+  - 
