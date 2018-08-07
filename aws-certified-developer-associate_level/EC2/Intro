@@ -1,3 +1,10 @@
+EC2(Elastic compute cloud)
+  - virtual cloud instance.
+  - scalability(create/terminate on the fly)
+  - security group must be assigned to the ec2 instance.
+  - Hypervisor is the software which gives virtual instance to different customer from the single/same host server.
+
+
 EC2 Instance option:
   - on-demand
   - reserved
@@ -10,12 +17,7 @@ Instance size:
   - large
   - medium
 
-Instance types:
-  - general purpose
-  - compute optimised
-  - memory optimised
-  - GPU
-  - storage optimized
+
 
 pricing:
   -  data transfer
@@ -26,9 +28,172 @@ pricing:
   - elastic load balancer
   - free tier
 
+Storage:
+  - Instant stores
+  - EBS(elastic block storage)
+
 EC2
   - each instance is assigned with public & private ip address, public cname
 
 Maintaining session state on ELB(elastic load balancer):
   - session are stores as file based session
-  - 
+
+AMI'S & Virtualisation:
+========================
+
+AMI:
+   - preconfigured package required to launch ec2 instance consists of OS, s/w packages, other required settings.
+   - used with auto scaling to quickly launch the new instance.
+   - we can create our own AMI's
+   - AMI types
+      - Community AMI (free to use)
+      - AWS market place ami(pay to use)
+      - My AMI (our own ami)
+
+Virtualisation:
+   - creating virtual version of something rather than actual version.
+   - portion of server's computing power and storage.
+   - Virtualisation for ec2 is run using xen Hypervisor software.
+   - Virtualisation types
+       -  HVM AMI(hardware virtual machine)
+          - run an operating system directly on top of virtual machine without any modifications.
+          - ec2 host system emulates some or all underlying hardware
+          - has advantage of hardware extensions
+       - PV AMI(paravirtual)
+          - guests can run on host hardware does not have explicit support for Virtualisation
+          - they cannot have hardware extensions.
+          - PV guests has better perfomance than HVM.
+
+EC2 instance types:
+=====================
+  - all ec2 in aws using intel zion processor.
+  - Processor features:
+      - AVX - highly parallel HPC workloads.
+      - AES-NI accelerated enc/decryption.
+      - Transactional sync extensions
+      - P & C states - tune perfomance and sleep state.
+      - Turboboost - over clocking.
+
+      - Instance types:
+        - general purpose (M)
+        - compute optimised (C)
+        - memory optimised (R/X)
+        - GPU (G/P)
+        - storage optimized (H)
+        - IO optimised (I)
+        - Burstable (T) [ will not give dedicated virtual server/ shared cpu]
+
+Launch EC2 Instance:
+=====================
+
+Ip Address:
+   Private IP:
+     - ec2 defauts assigned with private ip
+     - used to internal communication within instance(within vpc)
+   Public IP:
+     - has option to enable to public ip(auto-assign)
+     - direct communication with resource in open internet.
+   Elastic IP:
+     - static & public IPv4 address , designed for dynamic cloud computing.
+     - with eip, we can attach public ip addess to ec2 that was created only with private ip.
+     - attaching EIP will replace the default public ip address.
+     - if we stop  & start the instance, public ip will be changed whereas EIP will remains same.
+Bootstrapping & user data
+   - self starting process or set of commands without external input
+   - User data
+       - step/section during the EC2 instance creation process where we can include our custom commands.
+       - to view the user data in ec2 instance, enter the following commands
+            curl http://160.12.12.12/latest/user-data/
+            curl http://160.12.12.12/latest/meta-data/
+
+EC2 Storage Options:
+======================
+ - Instance store
+     - mounted on the host server.
+     - local Storage
+     - Faster IOPS
+     - Data will be lost if we terminate the instance.
+ - EBS(elastic block storage)
+     - outside of the host machine.
+     - virtual disk
+     - access over the network
+     - take snapshot frequently to save the data.
+     - EBS optimised (will not use the regular network for the file transfer). current gen ebs has these features.
+     - persistent(they can live beyond the lifecycle of ec2)
+     - EBS performance:
+        - IO operations are measured in IOPS(IO per sec)
+        - AWS measures IOPS in 256 kb chunks
+        - Operations greater than 256KB as divided into individual 256kb chunks.
+     - EBS Types:
+        - SSD
+           - general purpose
+              - use for dev environment
+              - baseline performance 3 IOPS/Gib
+              - Bursts upto 3000 IOPS
+              - volume size 1Gib to 1TiB
+           - Provisioned IOPS SSD
+              - used for mission critical applications
+              - volume size 4Gib to 16TiB
+              - upto 32000 IOPS per volume
+              - ec2 instance can have max of 80000 IOPS total.
+        - Hard Disk Drives
+           - Throughput Optimised
+              - low storage cost.
+              - volume size 500Gib - 16TiB
+              - Max Throughput of 500 MiB/s
+              - ec2 have max Throughput of 1750 MiB/s
+           - Coldest HDD
+              - Lowest cost.
+              - volume size 500Gib - 16 tib
+              - max Throughput of 250 MiB/s
+ - EFS(elastic file system)
+     - sharing file across ec2 machine.
+
+
+Security Groups and Keys Pairs:
+=================================
+
+
+Tags:
+  - we can use this to name the resource and group them together by project or for billing purposes(cost based on tags).
+  - can have 50 tags per ec2 instance.
+Security groups:
+  - every ec2 instance will have atleast 1 security group.
+  - security groups will be shared by multiple instance.
+  - Create a new security group.
+     - enter name & desc
+     - select "Add Rule"
+     - add rule using ssh,http,https and select your required ip Address
+Key pair:
+  - consists of private and public key.
+  - used to ssh to that instance.
+  - donwloaded key pair has private part of the key.
+  - public key is automatically copied to the ec2 instance when launched.
+  - on linux default user is ec2_user. for ubuntu its ubuntu.
+  - chmod 400 to pem file
+  - ssh -i pem.txt ec2-user@publicip
+
+EBS Snapshots:
+================
+- Snapshots are incremental in nature.
+- used to create custom ami's.
+- recommended to take snapshot frequently.
+- data in memory will not be written to snapshot.
+- fsfreeze to stop writes and issue snapshot command to start the snapshot.
+- EC2 -> Elastic block store -> volume -> actions -> create snapshots
+
+EC2 Placement groups:
+=======================
+cluster placement groups
+  - cluster of instance in the same availability zone.
+  - used for application required extremely low latency.
+  - aws attempts to place all instance as close as possible.
+  - its recommended to launch all instance in placement groups in single shot becaz later slots may not be available in that machine.
+  - it is possible to add instance to the placement group after launching the placement group.
+Spread placement groups
+  - place instance on distinct host hardware.
+
+- Create placement group steps
+   EC2 -> network & security -> placement groups -> create placement group -> enter name & select strategy -> create
+   - while launching instances select this placement group.
+- no additional charge for placement group.
