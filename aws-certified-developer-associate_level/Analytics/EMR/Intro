@@ -1,0 +1,36 @@
+EMR:
+- Simplifies big data processing (hadoop, spark) on aws.
+- processing large dataset in batches.
+
+Feature:
+- S3 for storage
+   - load into hdfs or keep in S3(EMRFS)
+- transient cluster
+   - scale up or down based on the data
+   - once the job completes, cluster terminates itself.
+   - pay only for the time cluster is active.
+- SPOT instances
+- Bootstrapping
+   - customized startup configuration.
+
+
+Cluster :
+   - it has master node and slave node.
+   - master node
+       - job submitted to the master node
+       - it launch the task in slave node.
+       - we have access only to master node.
+       -
+   - slave node
+      - two types of slave nodes
+          - task nodes
+             - software component which run only tasks
+             - its optional.
+             - its will use hdfs storage.
+             - to be used if only processing is high.
+             - we can scale by adding more task nodes to the cluster and terminate when its not required.
+          - core nodes
+             - has software component which run tasks and stores data in hdfs
+             - it deals with the heavy lifting of the data
+             - atleast one core node is required for the Cluster
+             - consists of cpu and memory

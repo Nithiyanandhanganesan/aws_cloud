@@ -197,3 +197,36 @@ Spread placement groups
    EC2 -> network & security -> placement groups -> create placement group -> enter name & select strategy -> create
    - while launching instances select this placement group.
 - no additional charge for placement group.
+
+EC2 Purchasing options:
+========================
+
+- On-demand
+     - allows to choose any instance types and terminate at any time.
+     - expensive option for long running instances
+     - flexible purchasing options
+     - Per second pricing : amazon linux & ubuntu AMI
+     - Hourly pricing : windows , rhel etc,
+- reserved
+     - purchase instance for specific time period (1 or 3 years)
+     - pay upfront , partial or no upfront
+     - significant discount.
+     - Standard
+          - need commitment for 1 - 3 years
+          - up to 75% discount
+     - Convertible
+          - can change/upgrade
+          - upto 54% discount.
+     - Scheduled
+          - 1 year term
+          - 5-10 % discount.
+          - schedule for specific time.
+- spot
+     - amazon sell unused instance for short period of time at substantial discount (upto 90%)
+     - price fluctuate gradually
+     - charged by minute or hour.
+     - we can specify the max price that we can pay
+     - automatically terminates when spot price exceeds the max price. (two minute warning)
+     - duration upto 6 hours
+     - price is fixed
+     - automatically start when price goes below max price.

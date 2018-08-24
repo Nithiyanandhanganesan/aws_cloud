@@ -1,0 +1,103 @@
+VPC:
+- VPC instance can span across availability zone.
+- it will not span across region.
+- connection from external source should go through internet gateway to reach the vpc.
+- create subnet before launching the instance in that vpc.
+
+types of subnets
+   - private subnets
+       - does not have direct route to internet
+   - public
+       - have direct route to internet
+       - eg: web application will be launched in public whereas db for that application will be launched in private subnet.
+
+- another internet gateway types is virtual private gateway. we can make our hardware to be used and connect to your vpc.
+- vpc is regional network.
+- we can use internal dns or we can use dhcp.
+
+benefits:
+---------
+- custom ip range inside each subnets
+- configure routes between subnets via route tables.
+- configure internet gateway to provide route to the internet for resources launched in vpc
+- create layered network of resources.
+- extends on-premise network into the cloud with VPN/VPG and an IPsec VPN tunnel
+- layered Security
+    - instance level security group(firewall on the instance level)
+    - subnet level network ACL(firewall on the subnet level)
+
+VPC IP Addressing:
+====================
+- IPV4 range from 0.0.0.0 to 255.255.255.255  [ 32 bit and 4-8 bit octets] [ private and public address]
+- IPV6 128 bits . 8 - 4chr hexadecimal  [public only]
+- aws supports IPV6 & IPv4
+- CIDR(classlist inter domain routing)
+     - 10.0.0.0/16 corresponds to range of 10.0.0.0 to 10.0.255.255  [ 65536 addresses]
+         - first 16 bits are fixed out of 32 bits.
+     - 10.0.0.0/24 corresponds to range of 10.0.0.0 to 10.0.0.255 [ 256 addresses]
+     - 10.0.0.0/32 corresponds to 10.0.0.0 [1 addresses]
+     - 0.0.0.0/0  corresponds to range of 0.0.0.0 to 255.255.255.255 [ entire internet]
+
+Default VPC:
+=============
+- it comes preconfigured with aws account when it is created.
+- default vpc has different setup than non-default vpc
+- default vpc has easy access to vpc without having to configure it from scratch.
+- default vpc, all subnet have route to internet via route table and an attached IGW.
+- instance launched in default vpc has both private and public ip.
+
+
+Route table:
+==============
+- route table consists of set of rules called routes used to determine where network traffic is directed.
+- consists of two main componenets:
+   - Destination : CIDR block range of the target
+   - Target : A name identifier of where the data is being routed to.
+- By default, all subnet traffic is allowed to each other available subnet within your VPC which is called local route.
+- cannot modify local route.
+- unlike IGW, we can have multiple "active" route tables in VPC.
+- cannot delete route table if it has dependencies.
+- best practice is to leave the default route table and create new route table when new routes are needed for specific subnets.
+
+VPC Networking routing basics:
+===============================
+- create vpc
+  - go to vpc dashboard
+  - select "Create VPC"
+  - enter name & ipv4 cidr block & click "create"
+- attached internet gateway to vpc
+  - select internet gateway in vpc dashboard.
+  - select "create internet gateway"  , enter name and click "create"
+  - attach the internet gateway to the vpc
+  - click the name of the igw and select "Actions -> attach to VPC -> select vpc" & attach.
+- create subnets
+  - "Create subnet" , enter name, select VPC, AZ, CIDR -> click "Create"
+  - by default all subnets are private becaz we have not associated with route table.
+- create route tables
+  - click "Route Table" , enter name and select VPC -> "Create"
+  - select "Route" -> Edit -> ADd another route -> Add destination[0.0.0.0/0] & enter igw name -> Save
+  - Select "Subnet Assocations" -> Edit -> select subnets -> Save
+
+
+  VPC Security Basics:
+  ======================
+  - First level of security is network access control list(ACLs) which operate at subnet level.
+  - If request pass the ACLs , then it will go to security groups for next level of security check.
+  Network Access Control List(NACL):
+   - By default ACL allow all traffic. Add custom firewall rule to block the traffic.
+   - ACLs essentials:
+    - support allow and deny rules for traffic in and out of subnet
+    - they are stateless. so return traffic must be allowed through outbound rule.
+    - process rules in number order when deciding whether to allow or deny
+    - if traffic denied at lower number rule and allowed at higher number rule, the allow rule will be ignored and traffic will be denied.
+    - last rule in every ACL is "Catch all" deny rule. (unless protocol/port is explicitly allowed, it will be denied.)
+    - NACL is optional layer of security for you VPC  that acts as firewall.
+    - best practice is to increment numbers by 10 so if you have to place rule in certain order, it will not cause issue.
+  Security Groups:
+   - second level of security.
+   - security group are stateful. so, we dont have to worry about outbound rules. Only inbound rules should suffice.
+   - it supports only allow rules
+   - all rules are evaluated before deciding the allow traffic.
+   - best practice is to allow only traffic that is required.
+   - it is associated at instance level.
+   - same security group can be used by more than instance.

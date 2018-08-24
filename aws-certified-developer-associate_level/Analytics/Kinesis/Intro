@@ -1,0 +1,71 @@
+AWS provides two primary services for data analytics:
+  -  Kinesis
+  -  Elastic Mapreduce
+
+Kinesis:
+==========
+- Real time ingesting and processing of big data.
+- Data in kinesis will not get delete even if consumer reads the data.
+- Multiple application can read same data at same time.
+- Kinesis services
+    - Kinesis video stream
+    - Kinesis data stream
+        - ingest data from many sources
+        - real time data processing
+        - data processed in sequence
+        - server side encryption.
+        - data is in 1megabyte blob. each blob has sequence id.
+        - data will be retained only for 24 hours(default). but we can extend upto 7 days.
+        - EMR connector available.
+    - Kinesis Firehose
+        - load streaming data to S3, redshift, splunk , elasticsearch.
+    - Kinesis Data analytics
+        - run sql queries against data streams or Firehose
+        - send result to output data streams or firehose.
+
+
+
+Kinesis data components:
+--------------------------
+- Stream -> contain one or more shards
+- Shards (processing power)
+    - 1Mb/sec data input and 2Mb/sec data output.
+    - distributes data to shards using partition key.
+    - if stream is greater than 1Mb/sec, then increase the shards.
+    - each shards has consumer thread running.
+- producers (data creators)
+    - can have multiple producers.
+    - device that produce data and send it to kinesis.
+    - inputs data to kinesis stream.
+    - eg:Iot sensors.
+    - more data you want to process, the more "shards" you add to kinesis streams
+    - each shards will process only 2MB read data per second and 1MB write per second.
+    - Kinesis data stream api
+       - PutRecord, PutRecords
+    - Kinesis producer library
+       - use this library to put data into kinesis because it will take care of the failure.
+    - Kinesis agent.
+       - stream files from linux servers.
+- consumers (data consumers)
+    - consumes streams data
+    - multiple consumer read same data at same time.
+    - kinesis consumer library
+       - use this library . written in java.
+       - automatically launch consumer thread in each shard and automatically scale out as required.
+    - Lambda can read stream data
+    - connector to EMR.
+
+Benefits:
+===========
+- Real time processing
+- Parallel processing
+- Durable
+- Scales
+
+Use Case:
+===========
+- gaming (clickstream)
+- real time analytics
+- application alerts
+- log/event data collection.
+- mobile data capture.

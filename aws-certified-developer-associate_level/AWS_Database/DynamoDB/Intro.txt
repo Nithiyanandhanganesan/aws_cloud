@@ -10,6 +10,7 @@ DynamoDB:
 - We can either scan the full table or query the table.
 - During query, we should add filter condition. Filter condition should only on partition key and sort key(if exists).
 - If you want to filter only based on other columns , we have to use secondary indexes.
+- we can encrypt the data at rest.
 
 Features:
 ===========
@@ -127,16 +128,16 @@ Read:
  - If we read only index keys and projected attributes , then calculation is same as read capacity.
  - If queried attributes are not projected attributes or keys, then we get extra latency and read capacity cost.
 Write:
- - delete ,update,add costs write capacity to perform action on the local index.
+ - delete ,update, add costs write capacity to perform action on the local index.
  - write a new item or update the existing item, costs one write operation to put item on the index.
  - if you change the value of indexed keyed attribute, two write required. (one to delete & one to add)
  - if an update delete an item that was in the index, one write is required to delete the item in the index.
 
-Calculating througput based on global secondary index:
+Calculating throughput based on global secondary index:
 ------------------------------------------------------
 
 Read:
- - global index have their own throuput capacity irrespective of tables capacity.
+ - global index have their own throughput capacity irrespective of tables capacity.
  - support eventual consistent , so it can read upto 8kb.
  - reads in global index is same as tables expect that size of index entries is used instead of entire item.
 

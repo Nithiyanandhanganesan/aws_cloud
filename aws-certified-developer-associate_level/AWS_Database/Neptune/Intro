@@ -1,0 +1,11 @@
+Neptune:
+=========
+- NoSql graph database.
+- fully managed database services.
+- it not serverless, we have to launch instances but platform is managed by aws.
+- use open sources api's
+    - tinkerpop gremlin
+    - rdf sparql
+- storage upto 64tb , upto 15 read replicas.
+- server side encryption.
+- use case:  social network, fraud detection.

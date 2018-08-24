@@ -4,8 +4,12 @@ S3(Simple secure storage):
 - One aws account can have only 100 buckets.
 - bucket name should comply with DNS naming conventions.
 - Bucket name must be unique, and follow the standards and must not be ip address.
+- No uppercase or underscores.
+- lowercase, numbers, ifens, periods are allowed.
 - Periods(.)and Ifens(-) do not follow each other in the bucket name.
 - S3 regions should be near to customers to optimize latency, minimize costs.
+- Only 100 buckets can be created at a time in aws account.
+- bucket ownership cannot be transferred to another account once a bucket is created.
 
 Objects:
 =============
@@ -43,7 +47,7 @@ S3 Performance:
     - >=300 put/list/delete
     - >=800 get
     - contact amazon to avoid temporary limits.
-- need to consider the consistent high number of request per second when 
+- need to consider the consistent high number of request per second when
     - >=100 put/list/delete
     - >=300 get
 

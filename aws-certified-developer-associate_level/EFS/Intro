@@ -1,0 +1,16 @@
+EFS: (elastic file system)
+=============================
+
+- ebs/instance store will be stored in single server.
+- efs is shared file system for ec2.
+- storage capacity is elastic.
+- supports NFS version 4.0 & 4.1 protocols when mounting.
+- efs can be accessed by one or more ec2 instance at the same time.
+- efs can be mounted on on-premises servers.
+- can scale upto terabytes
+- pay only for the amount of storage used.
+- burst network performance upto 100MiB/s
+- control file system access through POSIX permissions.
+- vpc for network access control and IAM for API access control.
+- encrypt data at rest using AWS KMS.
+- use case : big data analytics, media processing workflows.

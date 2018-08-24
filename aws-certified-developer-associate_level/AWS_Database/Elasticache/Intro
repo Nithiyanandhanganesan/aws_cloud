@@ -1,0 +1,15 @@
+Elasticache:
+============
+- frequently accessed data from rds will be stored by Elasticache and fetch instead of asking database again.
+- storing the session data
+- fully managed service, in memory data store and cache services.
+- improve db performance by caching result of queries made to db.
+- application use api to get and send data.
+- available engines to power Elasticache is:
+   - Memcached
+      - simple model, easy to use , multithreaded
+   - Redis
+      - complex data types, multi az, data persistence as well as in memory, snapshot for backup and restore, encryption.
+- primary use case is :
+   - offload primary database.
+   - check cache first before hits db.

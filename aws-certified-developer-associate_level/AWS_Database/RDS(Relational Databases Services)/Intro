@@ -1,0 +1,56 @@
+RDS:
+- Amazon will take care of database service and we can just use it.
+- no need of maintenance from user end.
+- no need of license. hourly cost includes the license cost.
+- fully managed databse services
+- ability to scale on demand. for scaling storge no need to restart whereas for
+- can enable multi AZ deployment for backup and highly available.
+- utilize read replicas (has primary and secondary. if primary fails use secondary)
+- oltp database.
+- supported dbs:
+     - mysql , mariadb, postgresql, oracle, sql server , aurora(amazon's own db).
+     - aurora
+          - mysql or postgresql compatible
+          - features
+             - continuous backup
+             - upto 15 read replicas across 3 AZs
+             - replication lag of single digit milliseconds.
+             - backtrack in seconds.
+             - multi-master option.
+      - amazon aurora serverless
+          - autoscaling
+          - use the db as you go
+          - no management of cluster or instances
+          - scales to zero if you are not Using
+          - pay as you go.
+          - pay only for the storage.
+- advantage
+    - automatic upgrade, backup, recovery
+    - multi-az
+
+RDS Backups:
+=============
+- automated point in time backups agains rds database
+- automated backups are deleted once the db instance is deleted and cannot be recovered
+- max retention period of automated snapshot is 35 days
+- manual snapshot can be retained as long as we want
+- snapshot can be copied to other region for disaster recovery.
+- snapshot are automatically encrypted.
+
+Read replicas:
+==============
+- asynchronous copies of primary database that are used of read only purpose.
+- when we write new data to primary db, then aws copies it for us in read replica.
+- you can create , and have multiple read replica for primary db.
+- cross-region replica are supported
+- mysql, mariadb , postgresql and aurora currently supports read replicas.
+- monitor replication lag using cloudwatch.
+
+Multi AZ failover:
+===================
+- automatic az failover synchronously replicates the data to a backup db instance located in another availability zone(but in same region)
+- In the event of
+    - service outage on az , primary db failure, manual failover initiated, updating software aws will automatically switch
+      DNS record from the primary instance to the stand-by instance.
+- rds backup is taken from stand by instance to reduce IO freeze and slow down if multi az is enabled.
+- in order for multi az to work, launch the primary db in "subnet groups"
