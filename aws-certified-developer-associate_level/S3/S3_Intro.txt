@@ -21,6 +21,9 @@ Objects larger than 5 gb require multipart upload API.
   - object can be reassembled after calling CompleteMultiPartUpload API.
 Multipart Upload is recommended for uploading file size greater than 100MB.
 Object can be encrypted and decrypted while downloading.
+Each objects must be assigned with storage class, which determines the object availability, durability and cost.
+By default all objects are private.
+Automatically switch to different storage class or deleted(via lifecyle policies)
 
 
 Data consistency:
