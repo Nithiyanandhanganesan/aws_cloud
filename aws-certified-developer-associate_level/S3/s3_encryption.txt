@@ -44,3 +44,10 @@ Setup encryption for the object:
 =====================================
 
 While uploading files into the S3, in Properties -> Encryption -> select Amazon S3 master Key
+
+Server Side Encryption:
+========================
+- S3 encryption (AES-256)
+- SSE-S3  -> S3 managed encryption keys
+- SSE-C   -> customer provided encryption keys
+- SSE-KMS -> S3 uses master keys in KMS
