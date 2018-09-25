@@ -1,0 +1,11 @@
+- SWF service is primarily an api which an application can integrate its work flow service into. this allows service to be used by
+  non-AWS services, such as on-premise data center.
+
+- Components:
+  - Starter: starts the workflow
+  - Workflow: Sequence of steps
+  - Activities: single step in the workflow.
+  - Tasks:
+     - Activity Tasks
+     - Decision task
+  - Worker: responsible for receiving the task and taking action on it.

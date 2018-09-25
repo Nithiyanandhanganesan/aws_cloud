@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="38px" viewBox="0 0 32 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>B3551129-0431-4B52-80E7-22847001B73B</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M25.3333333,30.1363636 L25.3333333,10.0454545 L31.6666667,10.0454545 L31.6666667,26.5 C31.6666667,32.2069424 27.0402757,36.8333333 21.3333333,36.8333333 L10.3333333,36.8333333 C4.62639092,36.8333333 -1.1735599e-14,32.2069424 -1.24344979e-14,26.5 L-1.24344979e-14,10.0454545 L6.33333333,10.0454545 L6.34850566,30.1363636 L25.3333333,30.1363636 Z M24.969697,5.32907052e-15 C28.6683312,4.64964243e-15 31.6666667,2.99833546 31.6666667,6.6969697 L-5.68434189e-14,6.6969697 C-5.72963709e-14,2.99833546 2.99833546,6.79428086e-16 6.6969697,0 L24.969697,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Internal-/-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Current-Dashboard-Dropdown" transform="translate(-951.000000, -191.000000)">
+            <g id="Main-Navigation" transform="translate(0.000000, 69.000000)">
+                <g id="Training" transform="translate(174.000000, 0.000000)">
+                    <g id="Drodown" transform="translate(0.000000, 85.000000)">
+                        <g id="Categories" transform="translate(0.000000, 33.000000)">
+                            <g id="Containers-Cat" transform="translate(756.000000, 2.000000)">
+                                <g id="Icon-/-Category-/-Containers" transform="translate(16.000000, 0.000000)">
+                                    <g id="Library" transform="translate(5.166667, 2.583333)">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+                                        <g id="🎨-Colors-/-White" mask="url(#mask-2)" fill="#FFFFFF">
+                                            <g transform="translate(-3.166667, -1.674242)" id="Rectangle">
+                                                <rect x="0" y="0" width="37.7564103" height="39.7435897"></rect>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,126 @@
+IAM Essentials:
+=================
+
+IAM Policies:
+===============
+- policy is a document that formally states one or more permissions.
+- by default, all permission are implicitly denied.
+- explicit deny always override explicit allow.
+- more than one policy can be attached to user or group at the same time
+- Policies cannot be directly attached to aws resources(such as ec2 instance)
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+IAM Roles:
+=============
+
+Defines Identities permission policies.
+Policy determine what identity can do and what cannot do. Roles does not have any password.
+Useful for giving access to users, applications ,services.
+
+IAM roles are a secure way to grant permissions to entities that you trust. Examples of entities include the following:
+- IAM user in another account
+- Application code running on an EC2 instance that needs to perform actions on AWS resources
+- An AWS service that needs to act on resources in your account to provide its features
+- Users from a corporate directory who use identity federation with SAML
+
+- Used to give permission to aws resource to third party user who does not have aws account.
+- Since policy cannot be directly attached to the resources, roles are used.
+- EC2 instance should have only one role attached at a time.
+- Used to get the temporary access to aws resource.
+- Once the role is assigned, it cannot be changed later on.
+
+IAM Hands-on:
+====================
+
+- Select IAM from the aws home page.
+- Select Roles in IAM page.
+- "Create Role"
+- Select appropriate permission policies for that role.
+- Enter role name & select create role.
+
+- Launch the EC2 instance and select the created IAM role while initiating the ec2 instance.
+- SSH into the ec2 instance.
+- sudo yum update
+- sudo yum install python-pip
+- sudo pip install boto3
+
+Script to demonstrate the IAM test:
+
+#!usr/bin/python
+import boto3
+s3=boto3.resource('s3')
+s3.create_bucket(Bucket='myuniquetestbucket')
+
+Save the above script as "test.py"
+It will create the bucket, since we gave admin role to that instance.
+
+Boto:
+==========
+Boto is the Amazon Web Services (AWS) SDK for Python, which allows Python developers to write software that makes use of Amazon services like S3 and EC2. Boto provides an easy to use, object-oriented API as well as low-level direct service access.
+
+
+API credentials with access keys:
+=======================================
+
+We cant use IAM roles if we are connecting to aws from outsite aws. Access Keys helps to connect to aws from outside.
+Used to sign requests such as aws sdk and cli's.
+can have temporary access keys which can expire.
+Useful for connecting outside from aws.
+
+
+- Go to IAM console.
+- In Users page, Select "Add Users" and create users with appropriate permissions.
+- Make sure you select the " generate program access secret key" check box.
+
+Below is the sample script:
+
+#!usr/bin/python
+from boto3.session import Session
+session=Session(aws_access_key_id='AKIAJSRD53LBZTSTYREQ',aws_secret_access_key='lBRdxcCKEGMaWR0DypAkAKSGSuoDBvvU2GB9/Hk8')
+s3=session.resource('s3')
+s3.create_bucket(Bucket='myunique28testbucket')
+
+
+Role arn format :
+  arn::aws::iam::89798798:rold/ec2-admin
+
+
+Common Request Headers
+  Authorization
+  Content-Length
+  Content-Type
+  Content-MD5
+  Date
+  Expect
+  Host
+  x-amz-content-sha256
+  x-amz-date
+  x-amz-security-token
+
+Common response Headers
+  Content-Length
+  Content-Type
+  Connection
+  Date
+  ETag
+  Server
+  x-amz-delete-marker
+  x-amz-id-2
+  x-amz-request-id
+  x-amz-version-id
+
+
+  explicit deny always overrides default allow.

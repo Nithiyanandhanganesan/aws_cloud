@@ -17,8 +17,6 @@ Instance size:
   - large
   - medium
 
-
-
 pricing:
   -  data transfer
   - Storage
@@ -50,19 +48,19 @@ AMI:
       - AWS market place ami(pay to use)
       - My AMI (our own ami)
 
-Virtualisation:
+Virtualization:
    - creating virtual version of something rather than actual version.
    - portion of server's computing power and storage.
-   - Virtualisation for ec2 is run using xen Hypervisor software.
-   - Virtualisation types
+   - Virtualization for ec2 is run using xen Hypervisor software.
+   - Virtualization types
        -  HVM AMI(hardware virtual machine)
           - run an operating system directly on top of virtual machine without any modifications.
           - ec2 host system emulates some or all underlying hardware
           - has advantage of hardware extensions
        - PV AMI(paravirtual)
-          - guests can run on host hardware does not have explicit support for Virtualisation
+          - guests can run on host hardware does not have explicit support for Virtualization
           - they cannot have hardware extensions.
-          - PV guests has better perfomance than HVM.
+          - PV guests has better performance than HVM earlier but not now.
 
 EC2 instance types:
 =====================
@@ -71,7 +69,7 @@ EC2 instance types:
       - AVX - highly parallel HPC workloads.
       - AES-NI accelerated enc/decryption.
       - Transactional sync extensions
-      - P & C states - tune perfomance and sleep state.
+      - P & C states - tune performance and sleep state.
       - Turboboost - over clocking.
 
       - Instance types:
@@ -113,11 +111,13 @@ EC2 Storage Options:
      - local Storage
      - Faster IOPS
      - Data will be lost if we terminate the instance.
+     - ephemeral
  - EBS(elastic block storage)
      - outside of the host machine.
      - virtual disk
      - access over the network
      - take snapshot frequently to save the data.
+     - attached to only one ec2 instance at a time.
      - EBS optimised (will not use the regular network for the file transfer). current gen ebs has these features.
      - persistent(they can live beyond the lifecycle of ec2)
      - EBS performance:

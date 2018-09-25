@@ -1,0 +1,111 @@
+Explicit Deny always overrides explicit allow.
+By default IAM user has non-explicit deny for all aws services. He cannot access anything till get allow access.
+
+
+Allow:
+------
+{
+  "Version":"2011-01-01",
+  "Statement": [
+     {
+        "Effect":"Allow",
+        "Action":"*"",
+        "Resource":"*"
+     }
+  ]
+}
+
+Deny:
+------
+
+{
+  "Version":"2011-01-01",
+  "Statement": [
+     {
+        "Effect":"Deny",
+        "Action":"*"",
+        "Resource":"*"
+     }
+  ]
+}
+
+
+IAM provides pre-built policy templates to assign to users and groups.
+Eg:
+  - administrator Access
+  - power Access
+  - read only access
+
+Using Policy Simulator, we can check the access to the user.
+Policy will only be attached to the user/groups, they cannot be attached to the resources.
+
+Roles:
+=======
+- Used to give permission to aws resource to third party user who does not have aws account.
+- Since policy cannot be directly attached to the resources, roles are used.
+- EC2 instance should have only one role attached at a time.
+- Used to get the temporary access to aws resource.
+- Once the role is assigned, it cannot be changed later on.
+
+STS:(Security Token Service)
+==============================
+
+ - STS allows to create temporary security credentials that grant trusted users to access aws resources.
+ - temporary credentials are short term use. can be active for few minutes to several hours. configurable between 15 mins to 12 or 36 hours.
+ - Once expired, no longer be used.
+ - when requested through sts api call, credentials are returned with three components
+     - security Token
+     - access key id
+     - secret access key
+     - expiration timestamp
+
+ - Identity federation
+     -  STS supports SAML allows use of microsoft active directory group.
+     -  web identity federation.(facebook,google)
+ - Cross account access.
+ - roles for amazon ec2.
+
+ API calls:
+     - AssumeRole                 - for Resource
+     - AssumeRoleWithWebIdentity  - for resource with web Identity
+     - AssumeRoleWithSAML         - for resource with ad group access
+     - GetFederationToken         - for IAM users
+     - GetSessionToken            - for users accessing from untrusted environments.
+
+When  to user STS:
+Identity federation:
+  - Enterprise Identity federation
+       - authenticate through company network.
+  - Web Identity Federation
+       - 3rd party identity  providers (i.e google, facebook)
+Roles for cross account users.
+  - used for org having more than one aws account.
+roles for amazon EC2
+  - grant access to application running in EC2 to access other aws resouces without any embed password.
+
+Authenticating user outside of aws.
+       - Customer Identity Provider
+       - LDAP / Active directory
+       - Web Identity
+
+
+IAM API Keys:
+================
+
+- API access keys are required to make programatic call to aws from :
+    - cli
+    - tools
+    - aws SDK
+    - direct http calls to api's
+- API keys are only available at time of user creation or when we reissue the new set of keys.
+- AWS will not regenerate the same set of access keys.
+- Roles does not have api credentials.
+- API credentials must be associated with the user.
+- never create or store api keys on an ec2 instance.
+
+AWS Organisation:
+==================
+
+- Manage multiple account within Organization.
+- Service control policy will control what each account can do.
+- Consolidated billing.

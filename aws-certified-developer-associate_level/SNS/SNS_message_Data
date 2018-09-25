@@ -17,7 +17,7 @@ SNS message data:
   - type
   - UnsubscribeURL
 
-Each message attribute shoud have
+Each message attribute should have
  - names
  - type
  - value

@@ -14,10 +14,11 @@ Subscriber:
   - Subscribe an endpoint to a topic to receive messages published to that topic
   - subscribe endpoints are :
     - mobile apps
-    - web servers
+    - web servers (http, https)
     - email address
     - amazon sqs queue
     - aws lambda
+    - sms
 
 Publish : Publish a message to a topic or as a direct publish to a platform endpoint
 Publish text message (SMS): Publish a text message to a phone number

@@ -14,6 +14,12 @@ S3(Simple secure storage):
 Objects:
 =============
 In cloud, all folder and files under the buckets are referred as objects.
+
+
+Data transfer:
+------------------
+Multipart:
+---------
 Maximum size of the objects can be 5 TB.
 Objects larger than 5 gb require multipart upload API.
   - break the object and upload independently and in parallel.
@@ -23,8 +29,44 @@ Multipart Upload is recommended for uploading file size greater than 100MB.
 Object can be encrypted and decrypted while downloading.
 Each objects must be assigned with storage class, which determines the object availability, durability and cost.
 By default all objects are private.
-Automatically switch to different storage class or deleted(via lifecyle policies)
+Automatically switch to different storage class or deleted(via lifecycle policies)
 
+When user wants to upload large file, to rescue the network issue cloudfront helps to upload the file.
+
+Snowball:
+---------
+When we want to copy on premise data to s3, which is on petabytes will take long time to upload the data. AWS has solution for this called "Snowball".
+Snowball:
+  - petabyte scale data transport solution.
+  - used aws provided secure transfer appliance.
+  - quickly move data in and out of aws
+  - upto 80 tb per device.
+Snowball edge:
+  - snowball plus onboard compute capability.
+  - upto 100tb per device.
+  - can be clustered.
+  - s3 api interface.
+  - lambda function
+Snowmobile:
+  - exabyte scale data transfer
+  - 100PB per snowmobile.
+
+Storage Gateway:
+----------------
+  - From the local server copy the data to gateway server which in turn copies to S3.
+  - Connects local data center software appliance to cloud based storage such as S3
+  - VMWare or Hyper-V
+  - Store local data in S3
+  - Encryption at rest and transit.
+  Volume Gateway:
+    - EBS snapshots for disaster recovery.
+    - Gateway cached Volume
+    - Gateway stored volume
+  File Gateway
+    - local nfs . object stored and retrievable in s3
+  Tape Gateway
+    - emulates industry standata iSCSI-based virtual tape library
+    - Common  backup application.
 
 Data consistency:
 =======================

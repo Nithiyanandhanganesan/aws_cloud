@@ -1,0 +1,111 @@
+Elastic load balancing:
+========================
+
+- managed service to distrubute traffic across instance/servers.
+- automates the process of distributing the incoming traffic to all instance associates with the ELB.
+- Cross zone load balancing
+     - balance traffic across multiple availability zones.
+- ELB can be paired with Auto-Scaling to enhance high availability and fault tolerance and allow for automated scalability and elasticity.
+- ELB has its own record set that allows for direct access from the open internet access.
+- ELB can used as public-facing or internal load balancer and load balance to internal ec2 instance launched in private subnet.
+- ELB automatically stop serving traffic to instance that become unhealthy.
+- ELB or ALB can help reduce computing power of ec2 instance by allowing for an ssl certificate to be applied directly to the ELB.
+Types of ELB:
+  - Classic ELB
+     - designed for routing traffic to multiple ec2 instance
+     - all instance get routed to evenly and no special routing request can me made
+     - supports SSL, HTTP, HTTPS, TCP
+     - keeps track of request in which it make and latency.
+     - round robin rules.
+  - Application ELB
+     - application elb can do everthing which classic elb can do.
+     - designed for balancing traffic to one or more instance target groups using "Content based" rules.
+     - layer 7(application layer) load balancer.
+     - analyse the request and based on the nature of the request , it will forward to target instance groups.
+     - Content based rules can be configured using:
+       - Host-based rules: route traffic based on host field in the http request.
+       - Path-based rules: route traffic based on the path present in the http request.
+       - can balance traffic to multiple ports.
+     - supports ECS, EKS , HTTPS , HTTP/2, websockets, access logs, stickly sessions, and AWS WAF(Web application firewall)
+  - network elb
+     - designed for extreme Performance
+     - it best to use when load suddenly increases in short period of time.
+     - Layer 4 (TCP) load balancer
+     - static/elastic ip address per AZ
+     - IP addresses as targets.
+     - no ssl offloading.
+
+Serving traffic to and from private subnets:
+============================================
+
+- if we ELB to be public facing, then launch the ELB in any one of the public subnets.
+- from browser, it connects to ELB and route it to instance in that public subnets.
+- if some wants to hit particular host, using ELB its not possible . because it redirect the request based on the rule.
+  in that case, we have to user "Bastion Host"
+
+Bastion Host:
+------------------
+- bastion host is an ec2 instance that lives in a public subnet and is used as a "gateway" for traffic that is destined for instance that lives
+  in private subnets.
+- use bastion host to access EC2 instance in private subnet.
+- bastion host has increased and tight security
+- bastion host can be used as a access point to "ssh" into an internal network  without VPN.
+
+- if we want to download patch to host in private subnet, then we have to user "NAT(network address translator) Gateway"
+
+NAT Gateway:
+------------------
+- designed to provide ec2 instance that live in a private subnet with a route to internet.
+- NAT gateway prevent any host outside of VPC from initiating the connection with instance.
+- NAT gateway will allow incoming traffic only if request originated from host in the private subnet.
+- its required for host in private subnet to connect to the internet.
+- it must be created in public subnet and be a part of private subnets route table.
+- NAT instance is identical to nat gateway in its purpose.
+
+
+VPC Endpoints:
+==================
+Gateway Endpoints:
+  - url end points open to public.
+  - eg: S3, DynamoDB
+Interface Endpoints:
+  - cloudwatch logs, CodeBuild, KMS, Kinesis, service catalog
+  - nodes in private subnet , connect to s3 using this endpoints.
+
+AutoScaling:
+===================
+- adding more instance based on the load dynamically.
+- autoscaling will increase or decrease the number of instances based on the cloudwatch metrics.
+
+AutoScaling Components:
+========================
+- Launch Configuration:
+  - EC2 "template" used when the auto scaling groups needs to provision an additional instance(i.e AMI, instance type, storage)
+- Auto Scaling groups:
+  - all the rules and settings are governed when the ec2 instance are provisioned or terminated
+     - no. of min & max instance allowed
+     - VPC and AZs where the instance should be launched
+     - if provisioned instance should receive traffic from elb
+     - scaling Policies
+     - sns Notifications
+- Cloudwatch Alarms
+  - Metrics are selected that indicates load on the instances(CPU,memory)
+  - alarms are triggered when metrics exceeds threshold.
+  - alarms triggers autoscaling policies.
+
+Making application as stateless:
+==================================
+Stateful application:
+  When user send request, ELB will send request to any one of the instance. Same user and in the same session, if he send another requests
+  ELB should redirect to the same session. AWS uses "sticky session" to solve this problem. When user send request for the first time, it attach
+  cookie in the response. So, next time when the same to gives request, it redirect to the appropriate instance. But when the particular instance is down
+  then all session data will be gone and user the start login to the application again. Also, user will be locked to the instance. Though the instances
+  are free it may not use those instance.
+
+Stateless application:
+  In stateless application, the session data will be stored in the external data source like DynamoDB or redis or shared file system.
+  So, ELB will redirect the request to any of the free instance.
+
+
+High availability vs Fault tolerance:
+=======================================

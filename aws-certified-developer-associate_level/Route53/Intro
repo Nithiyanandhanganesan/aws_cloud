@@ -1,0 +1,69 @@
+Route 53:
+========
+- Route 53 is a DNS service.
+- from the browser , it request the DNS server with the domain name and in return DNS will give the IP address of the host.
+- Route 53 runs across the world in the edge node.
+- It's a domain management service(DNS) provided by AWS.
+- Features:
+  - Domain Registration:
+    - Register the domain names such as nithiy.com
+  - Domain Name System service
+    - translate the domain names into ip addresses
+    - responds to DNS queries using a global network of authoritative DNS servers which reduces latency.
+  - Health checking
+    - sends automatic request over the internet to application to verify its reachable, available, functional.
+
+- Manage external DNS for domain routing. eg: routing the request from nithiy.com to s3, cloudfront, EC2
+- Its commonly used to ELB to distribute the traffic from domain to ELB
+- Also used to manage internal DNS for custom internal hostnames within a VPC as long as VPC is configured for it.
+- Latency, failover policy allow region-to-region fault tolerance Architecture design.
+- easily configure failover for S3
+
+
+Route 53 Hosted Zones:
+=======================
+
+- Hosted zones stores dns records for your domain.
+- it contains all the rules that tells route 53 what to do with the DNS request.
+- types of hosted Zones
+  - public hosted zones is a container that holds information about how you want to route the traffic on the internet for a domain.
+  - private hosted zones is a container that holds information about how you want to route the traffic for a domain and its subdomain within
+    one or more Amazon VPC.
+- after create the hosted zones for your domain, create resource record sets to tell DNS how you want traffic to be routed for that domain.
+- Hosted zone come with pre-populated with NS and SOA(start of authority) record sets.
+
+Route 53 Record Sets:
+======================
+- Match domain names with IP addresses
+- comprised of various options
+  - record Types
+  - standard/alias
+  - routing policy
+  - evaluate target health
+
+- Common record type include
+   - A: point domain to IPV4
+   - AAAA: point domain to IPV6
+   - CNAME: point host name to another host
+   - MX: used to route email.
+
+- Alias Record sets
+  - instead of an ip address, alias record sets contain pointer to the AWS specific resource such as:
+    - ELB, Cloudfront, Elastic Beanstalk, S3 for static website.
+
+- Routing Policy
+  - Simple : route traffic to one endpoints
+  - Weighted: route traffic to multiple Endpoints
+  - Latency : route traffic to end point based on the user latency to various Endpoints
+  - Failover : route traffic to "secondary" endpoint when "primary" is not availble.
+  - Geolocation: route traffic to endpoint based on the geo location.
+
+- Evaluate health check
+
+
+Route 53 for DNS Failover:
+===========================
+
+- By using failover routing policy in a Route 53 DNS record set, S3 bucket can be used as a failover endpoint.
+- though s3 is used as static web hosting, it will provide some information to user that site is down.
+- For DNS record to use the S3 bucket as an endpoint, bucket name must be same as the domain name.

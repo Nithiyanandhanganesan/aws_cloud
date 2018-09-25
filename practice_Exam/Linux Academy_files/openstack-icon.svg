@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>9C8FAB53-2BCE-440A-8409-AF86B10139A6</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M0.0225477336,34.2365209 L0.0225477336,26.2390693 L8.23636496,26.2390693 L8.2621338,28.2209273 C8.25869017,28.4413098 8.34869315,28.6538318 8.51207419,28.8111059 C8.67545524,28.9683801 8.89862868,29.0573285 9.13183209,29.0581178 L27.6531847,29.0581178 C28.1411454,29.0581208 28.5372141,28.6851498 28.5389885,28.2239717 L28.5389885,26.2421137 L36.7753534,26.2421137 L36.7753534,34.2334766 C36.7682679,35.6684371 35.5363881,36.8286302 34.0180877,36.830289 L2.77337123,36.830289 C1.25269123,36.8333333 0.0225477336,35.6707008 0.0225477336,34.2365209 Z M36.8333333,24.3180979 L28.5873051,24.3180979 L28.5389885,12.3660633 L36.7753534,12.3660633 L36.8333333,24.3180979 Z M0.0483165719,24.3241866 L0,12.3660633 L8.23636496,12.3660633 L8.28468153,24.3241866 L0.0483165719,24.3241866 Z M36.7656901,10.390294 L28.5261041,10.390294 L28.5261041,8.63067196 C28.5278915,8.17621042 28.140468,7.80596538 27.6596269,7.80261454 L9.13183209,7.80261454 C8.64814408,7.80258714 8.25454523,8.17051209 8.24924938,8.62762763 L8.24924938,10.3781166 L0.0128844192,10.3781166 L0.0128844192,2.59072375 C0.0217426451,1.15744783 1.25362181,-2.44513803e-05 2.77015012,0 L34.0438566,0 C35.5603668,0.00501932814 36.787925,1.16656858 36.791459,2.59985674 L36.7656901,10.390294 Z" id="path-1"></path>
+    </defs>
+    <g id="Internal-/-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Current-Dashboard-Dropdown" transform="translate(-1048.000000, -191.000000)">
+            <g id="Main-Navigation" transform="translate(0.000000, 69.000000)">
+                <g id="Training" transform="translate(174.000000, 0.000000)">
+                    <g id="Drodown" transform="translate(0.000000, 85.000000)">
+                        <g id="Categories" transform="translate(0.000000, 33.000000)">
+                            <g id="OpenStack-Cat" transform="translate(855.000000, 2.000000)">
+                                <g id="Icon-/-Category-/-OpenStack" transform="translate(17.000000, 0.000000)">
+                                    <g id="Library" transform="translate(2.583333, 2.583333)">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <use id="Mask" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                        <g id="🎨-Colors-/-White" mask="url(#mask-2)" fill="#FFFFFF">
+                                            <g transform="translate(-1.674242, -1.674242)" id="Rectangle">
+                                                <rect x="0" y="0" width="39.7435897" height="39.7435897"></rect>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+Glacier:
+
+- archival storage type
+- check out & check in job will take several hours.
+- should not be used as a backup solution
+- 99.99 % durability
+- SSL/TLS endpoint
+- encryption at rest
+- vault lock feature [ unable to change the content]
+
+Data retrieval (price varies)
+- expedited 1-5 mins
+- standard 3-5 hours
+- bulk 5-12 hours
+
+We can setup lifecyle policies for glacier.

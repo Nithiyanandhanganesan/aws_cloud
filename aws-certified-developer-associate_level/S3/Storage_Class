@@ -1,0 +1,53 @@
+Storage Classes:
+=================
+
+standard
+  - designed for general , all purpose
+  - default storage option
+  - 99.99% durability and availability.
+  - most expensive storage Classes
+
+Infrequent Access(S3-IA):
+  - designed for objects that are not frequently accessed.
+  - less expensive than standard
+  - 99.99% durability
+  - 99.9% availability.
+  - 30 days minimum charge if we store the data in this storage class.
+
+One Zone Infrequent Access(S3 One Zone-IA):
+  - designed for non-critical and reproducible objects.
+  - less expensive than above two.
+  - 99.99% durability
+  - 99.5% availability.
+  - 30 day minimum charge if we store the data in this storage class.
+
+Glacier:(separate storage service)
+  - designed for long term archival storage
+  - may take several hours for object stored in glacier to be retrieved.
+  - cheapest storage class of all.
+  - 99.99% durability
+  - 90 days minimum charge if we store the data in this storage class.
+  - we can transfer data from s3 to glacier.
+  - from s3 we cannot download the object stored in glacier.
+  - we need to restore if we want to download from s3.
+
+When storage cost decrease , access cost increase.
+
+
+Lifecycle Policies:
+=====================
+set of rules that automate the migration of data between storage class.
+by default lifecyle policies are disabled.
+
+S3 Event Notifications:
+========================
+allow to setup automated communication between S3 and other aws services when a selected event occurs at in an S3 bucket.
+common trigger Notifications include:
+  - ObjectCreated
+     - Put , Post, copy
+  - ObjectRemoved
+
+Event Notifications can be sent to following services:
+  - sns
+  - lambda
+  - sqs queue

@@ -1,0 +1,92 @@
+VPN:
+========
+- extend the network from one geographic location to another geographic location.
+- traffic traverses the internet.
+- essentially extending "on-premise" network to the cloud.
+- allows to communicate all resouces(ec2) internally without the need of public ip and internet gateway.
+- provide additional level of security that traffic sent using vpn is encrypted.
+- it has two parallel routes (Ipsec tunnels) which is for redundancy.
+- Only one vpn can be attached to VPC. only one IGW can be attached to VPC.
+- vpc can have both vpg and igw attached at the same time.
+- from the user end its connection start from "Customer Gateway" and reach the VPC through "Internet Gateway"/"Virtual Private Gateway"
+- both customer gateway and VPG should have public ip address.
+- we can have more than one customer gateway
+
+Internet protocol security(IPsec)
+  - security protocol for IPv4.
+  - provide mutual authentication, encryption
+
+Customer Gateway:
+- Physical device present in the "on-premise" location acts as a connector to VPN location.
+- Customer Gateway Component:
+    - configure the public ip of the device at the on-premise location.
+- static Routing - we define routes
+- dynamic routing - routes automatically, automatic failover.
+  - border gateway protocol.
+  - autonomous system number.
+
+Virtual Private Gateway:
+- acts as a connection of VPC side.
+- VPG is connected to vpc
+- target for route tables.
+- Cloud Hub - multiple customer network.
+
+VPN Connection:
+- Connection between customer gateway and virtual private gateway
+- connection is setup and managed by AWS
+- each connection uses two IPsec tunnels for redundancy
+
+Router:
+- User can Physically setup and manage router.
+- route tables are part of router assigned to vpc
+- when setting up VPN, route table should have ip of on-premise network and point them to VPG.
+
+
+AWS Direct Connect:
+======================
+- service that provide dedicated network Connection between your network and aws direct connect location.
+- this is done through authorized direct connect provider.
+   1 Gbps or 10 Gbps
+- dedicated network can be shared by multiple companies.
+- provides ability to access vpc in the aws region it is associated with.
+- access to public service endpoints in all regions.
+
+Benefits:
+  - Reduce network costs
+    - reduce bandwidth commitment to corporate ISP over public internet.
+    - data transferred over direct connect is billed at lower rate by aws.
+  - increase network consistency
+    - dedicated Private network reduce Latency
+  - connect the direct connect connection to VPG in you VPC for a dedicated private connection from on premise to VPC.
+  - use multiple VIF (virtual interface) to connect to multiple VPCs.
+
+Private Virtual Interface(VIF):
+  - allows to interface with AWS VPC.
+  - only communicate within internal IP addresses inside EC2.
+  - cannot access public IP
+  - use two direct connection for active-active and active-failover connection.
+  - use VPC as a backup for direct connect connection.
+  - can create multiple private virtual interface to multiple VPC at the same time.
+
+Public Virtual Interface:
+  - allows to use the direct connect connection to connect to public endpoints(S3, dynamodb)
+  - though accessing public endpoint, connection are made through dedicated network.
+  - access public service in any region.
+
+
+Direct Connect Gateway:
+  - with direct we connect to resource in the same region.
+  - with direct connect gateway we can connect to other region except china.
+  - connect to any vpc in any region.
+  - vpc cannot have overlap CIDR block.
+
+VPC Peering:
+=================
+
+- VPC peering is used to connect private network from one VPC or one subnet to another VPC.
+- sharing internal resource via private ip address.
+- vpc peering can occur between vpc in same or different region.
+- we can configure vpc peering betwween vpc in two different accounts.
+- to peer vpc , they must have separate CIDR block range.
+- transitive connection are not allowed.
+- can configure to peering the entire vpc or just subnet.

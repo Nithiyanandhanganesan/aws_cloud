@@ -1,0 +1,16 @@
+Amazon MQ:
+==========
+- opensource message broker.
+- managed apachee activeMQ
+- compatible with JMS API or protocol such as AMQP, MQTT
+- can function as a queue or topic.
+- one-to-one or many-to-many (i.e it can function as a SNS or SQS)
+- to open the active mq web console, make sure that port 8162 is open in the security groups.
+- SNS & SQS using amazon proprietary services. so if you want to migrate the existing message service to amazon then we have to user "Acitve MQ"
+
+
+MQ Components:
+broker
+  - single instances
+  - Highly available pair (active/standby)
+  - managed updates.

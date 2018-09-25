@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="30px" viewBox="0 0 38 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>7A14D89F-8AE6-4339-87CA-2DC214F5809F</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M23.5319883,4.45601887 L37.9038462,29.5576923 L9.47596154,29.2603516 L27.7962218,27.1811683 L17.9253859,15.7442595 L23.5319883,4.45601887 Z M22.4264084,0 L8.13359257,26.0670898 L0,26.8841415 L9.5550035,10.7685252 L22.4264084,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Internal-/-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Current-Dashboard-Dropdown" transform="translate(-517.000000, -193.000000)">
+            <g id="Main-Navigation" transform="translate(0.000000, 69.000000)">
+                <g id="Training" transform="translate(174.000000, 0.000000)">
+                    <g id="Drodown" transform="translate(0.000000, 85.000000)">
+                        <g id="Categories" transform="translate(0.000000, 33.000000)">
+                            <g id="Azure-Cat" transform="translate(341.000000, 0.000000)">
+                                <g id="Icon-/-Categories-/-Azure">
+                                    <g id="Azure" transform="translate(2.086538, 6.259615)">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <use id="Mask" fill="#035BDA" xlink:href="#path-1"></use>
+                                        <g id="🎨-Colors-/-White" mask="url(#mask-2)" fill="#FFFFFF">
+                                            <g transform="translate(-1.722902, -3.284188)" id="Rectangle">
+                                                <rect x="0" y="0" width="41.1288831" height="39.1225962"></rect>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

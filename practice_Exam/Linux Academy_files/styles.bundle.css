@@ -1,0 +1,626 @@
+body {
+  font-family: "omnes-pro", "Omnes", Helvetica, Arial, sans-serif; }
+
+/* You can add global styles to this file, and also import other style files */
+header#linuxacademy-header {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Main Header - Global */
+  /* Top Nav */
+  /* Secondary Nav */ }
+  header#linuxacademy-header a,
+  header#linuxacademy-header a:link,
+  header#linuxacademy-header a:visited {
+    text-decoration: none;
+    font-size: 16px; }
+  header#linuxacademy-header .dropdown-la a,
+  header#linuxacademy-header .dropdown-la a:link,
+  header#linuxacademy-header .dropdown-la a:visited {
+    color: #1BB398; }
+  header#linuxacademy-header .dropdown-la .dropdown-menu {
+    font-size: 16px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    border-top: 0;
+    max-width: 450px;
+    border-color: #29485B;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  header#linuxacademy-header #top-nav {
+    /* Notifications */
+    /* Gems */
+    /* Account */ }
+    header#linuxacademy-header #top-nav .top-link {
+      margin-left: 24px; }
+    header#linuxacademy-header #top-nav .brand {
+      background: #182B37;
+      padding-bottom: 5px;
+      color: #FFFFFF; }
+      header#linuxacademy-header #top-nav .brand #beta-dropdown .beta-icon {
+        display: none;
+        font-size: 14px;
+        color: #FFFFFF;
+        background-color: #1BB398;
+        text-transform: uppercase;
+        margin-left: 10px; }
+      header#linuxacademy-header #top-nav .brand .row {
+        padding: 15px 0; }
+      header#linuxacademy-header #top-nav .brand a,
+      header#linuxacademy-header #top-nav .brand a:link,
+      header#linuxacademy-header #top-nav .brand a:visited {
+        color: #FFFFFF; }
+      header#linuxacademy-header #top-nav .brand .dropdown a {
+        font-size: 16px;
+        text-decoration: none;
+        color: #1BB398; }
+        header#linuxacademy-header #top-nav .brand .dropdown a:hover {
+          color: #FFFFFF; }
+      header#linuxacademy-header #top-nav .brand .dropdown.top-link a {
+        color: #FFFFFF; }
+      header#linuxacademy-header #top-nav .brand hr.color-bands {
+        margin-top: 0;
+        display: block;
+        border: 0;
+        height: 1px;
+        margin: 5px 0;
+        background: #29485B center top no-repeat url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHQAAAAGCAMAAACVdzldAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRFG7OY17uO8VlRtSpcKfo7mAAAAEBJREFUeNrs1AERACAIBLBH+3c2AB4U2EIsh4+wK1aXLoKRjnSkIx3pSEc60pEO0pGOdKQjHelIRzrSQTqTJ8AAk2InWxAwzaAAAAAASUVORK5CYII="); }
+    header#linuxacademy-header #top-nav #notification-dropdown span.badge {
+      font-size: 16px;
+      font-weight: normal; }
+      header#linuxacademy-header #top-nav #notification-dropdown span.badge .fa,
+      header#linuxacademy-header #top-nav #notification-dropdown span.badge span {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        vertical-align: middle; }
+      header#linuxacademy-header #top-nav #notification-dropdown span.badge .fa {
+        font-size: 14px; }
+    header#linuxacademy-header #top-nav #notification-dropdown #notification_overlay {
+      font-size: 16px; }
+      header#linuxacademy-header #top-nav #notification-dropdown #notification_overlay a {
+        color: #1BB398;
+        padding: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+        header#linuxacademy-header #top-nav #notification-dropdown #notification_overlay a:hover {
+          background: #29485B;
+          color: #FFFFFF; }
+    header#linuxacademy-header #top-nav #gem-count {
+      cursor: pointer; }
+      header#linuxacademy-header #top-nav #gem-count span.badge {
+        font-size: 16px;
+        font-weight: normal; }
+        header#linuxacademy-header #top-nav #gem-count span.badge img,
+        header#linuxacademy-header #top-nav #gem-count span.badge span {
+          display: inline-block;
+          *display: inline;
+          zoom: 1;
+          vertical-align: middle; }
+    header#linuxacademy-header #top-nav #support_overlay a {
+      color: #1BB398;
+      padding: 10px; }
+      header#linuxacademy-header #top-nav #support_overlay a:hover {
+        background: #29485B;
+        color: #FFFFFF; }
+    header#linuxacademy-header #top-nav #account-dropdown #account_overlay a {
+      color: #1BB398;
+      padding: 10px; }
+      header#linuxacademy-header #top-nav #account-dropdown #account_overlay a:hover {
+        background: #29485B;
+        color: #FFFFFF; }
+  header#linuxacademy-header #secondary-nav {
+    /* Community dropdown */
+    /* Community dropdown */
+    /* Training dropdown */ }
+    header#linuxacademy-header #secondary-nav .nav .open > a {
+      background: #182B37; }
+    header#linuxacademy-header #secondary-nav .main-nav {
+      background: #29485B;
+      color: #FFFFFF; }
+      header#linuxacademy-header #secondary-nav .main-nav a, header#linuxacademy-header #secondary-nav .main-nav a:link, header#linuxacademy-header #secondary-nav .main-nav a:visited {
+        color: #FFFFFF; }
+        header#linuxacademy-header #secondary-nav .main-nav a:hover, header#linuxacademy-header #secondary-nav .main-nav a:focus, header#linuxacademy-header #secondary-nav .main-nav a:active, header#linuxacademy-header #secondary-nav .main-nav a:link:hover, header#linuxacademy-header #secondary-nav .main-nav a:link:focus, header#linuxacademy-header #secondary-nav .main-nav a:link:active, header#linuxacademy-header #secondary-nav .main-nav a:visited:hover, header#linuxacademy-header #secondary-nav .main-nav a:visited:focus, header#linuxacademy-header #secondary-nav .main-nav a:visited:active {
+          background: #182B37; }
+      header#linuxacademy-header #secondary-nav .main-nav .nav-tabs {
+        border-bottom: 0; }
+        header#linuxacademy-header #secondary-nav .main-nav .nav-tabs > li > a {
+          border: 1px solid transparent; }
+      header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs {
+        background: #29485B;
+        color: #FFFFFF;
+        border-left: 1px solid #182B37; }
+        header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li {
+          text-align: center; }
+          header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li > a,
+          header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li .nav-la-main-mobile > .btn {
+            padding: 20px 26px;
+            border-radius: 0;
+            color: #FFFFFF;
+            font-size: 15px;
+            text-decoration: none;
+            border-right: 1px solid #182B37;
+            margin: 0 0 1px 0;
+            outline: none; }
+            header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li > a.labs-nav-extra-padding,
+            header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li .nav-la-main-mobile > .btn.labs-nav-extra-padding {
+              padding: 20px 10px; }
+            header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li > a > i.fa,
+            header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li .nav-la-main-mobile > .btn > i.fa {
+              font-size: 1.5em;
+              margin-bottom: 5px; }
+          header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li:first-child > a {
+            border-left: 1px solid #182B37; }
+          header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li.search a {
+            width: 90px;
+            padding: 31px 25px 30px 25px; }
+      header#linuxacademy-header #secondary-nav .main-nav .nav-la.nav-tabs {
+        border-color: #29485B; }
+      header#linuxacademy-header #secondary-nav .main-nav .nav-la-main-playground-overlay,
+      header#linuxacademy-header #secondary-nav .main-nav .nav-la-main-library-overlay,
+      header#linuxacademy-header #secondary-nav .main-nav .nav-la-main-community-overlay {
+        position: absolute;
+        color: #FFFFFF;
+        background: #182B37;
+        z-index: 2000;
+        top: 100%;
+        box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.22);
+        -moz-box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.22);
+        -webkit-box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.22);
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        margin-top: -1px; }
+      header#linuxacademy-header #secondary-nav .main-nav .community-dd-container {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 15px;
+        padding-left: 15px; }
+      header#linuxacademy-header #secondary-nav .main-nav .playground-dd-container {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 15px;
+        padding-left: 15px; }
+      header#linuxacademy-header #secondary-nav .main-nav .nav-la-main-library-overlay {
+        left: calc(-50% - 56px); }
+      header#linuxacademy-header #secondary-nav .main-nav .nav-la-main-community-overlay {
+        left: calc(-138%); }
+      header#linuxacademy-header #secondary-nav .main-nav .nav-la-main-playground-overlay {
+        left: calc(-50%); }
+    header#linuxacademy-header #secondary-nav .nav-la-main-mobile a.btn {
+      background: #1BB398;
+      text-decoration: none;
+      border-radius: 0;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      padding: 20px 26px; }
+      header#linuxacademy-header #secondary-nav .nav-la-main-mobile a.btn .fa {
+        font-size: 1.5em; }
+    header#linuxacademy-header #secondary-nav .nav-la-main-mobile .dropdown-menu a {
+      color: #1BB398;
+      padding: 10px; }
+      header#linuxacademy-header #secondary-nav .nav-la-main-mobile .dropdown-menu a:hover {
+        background: #29485B;
+        color: #FFFFFF; }
+    header#linuxacademy-header #secondary-nav div#search_overlay {
+      padding: 20px;
+      background: #182B37; }
+    header#linuxacademy-header #secondary-nav div#search_overlay input#search {
+      background: #29485B;
+      border: 0;
+      color: #FFFFFF;
+      width: 325px;
+      display: block;
+      font-size: 16px;
+      height: 38px; }
+    header#linuxacademy-header #secondary-nav #community_overlay ul {
+      list-style: none;
+      text-align: center;
+      padding: 24px; }
+    header#linuxacademy-header #secondary-nav #community_overlay #community-topics li {
+      text-align: center; }
+    header#linuxacademy-header #secondary-nav #playground_overlay ul {
+      list-style: none;
+      text-align: center;
+      padding: 24px; }
+    header#linuxacademy-header #secondary-nav #playground_overlay #playground-options li {
+      text-align: center; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 24px auto 12px auto; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .sub-categories h2 {
+      margin: 0;
+      padding: 24px 0px 12px 0px;
+      border-right: 1px solid #29485B; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav h4 {
+      margin: 10px 0; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .align {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      margin-top: 35px; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav span.align {
+      margin-top: 25px; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav a.beta {
+      text-align: left;
+      margin: 10px auto; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav a.beta span,
+      header#linuxacademy-header #secondary-nav .custom-course-nav a.beta .mat-icon {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        vertical-align: middle; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav span.label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #FFFFFF;
+      background-color: #1BB398;
+      text-transform: uppercase; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .border {
+      border-bottom: 1px solid #29485B; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs li {
+      text-align: left; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs li img {
+        max-width: 100%;
+        display: block; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs li a {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: normal;
+        transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -webkit-transition: 0.3s ease; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs li a:hover {
+          background: none;
+          color: #F8931E;
+          transition: 0.3s ease;
+          -moz-transition: 0.3s ease;
+          -webkit-transition: 0.3s ease; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs li a img {
+          margin: 0 auto; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li {
+      text-align: center; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li a {
+        padding: 10px 0; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li.title {
+        text-align: left; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs.beta .col-md-2 {
+      padding: 0; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs.beta .col-md-2.title {
+        padding: 0 15px; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .nav-la-topics li {
+      text-align: left; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .nav-la-topics li.title {
+        text-align: left; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .border-right {
+      border-right: 1px solid #29485B; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .course-container {
+      margin-top: -53px;
+      padding-top: 45px;
+      padding-left: 0; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses #linux-certifications {
+      margin-top: -45px; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses ul.nav.nav-stacked {
+      border-right: 1px solid #29485B;
+      padding-right: 0px;
+      min-height: 400px;
+      text-indent: 15px; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses ul.nav.nav-stacked > li > a {
+        padding: 15px 0;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        color: #FFFFFF; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses ul.nav.nav-stacked > li > a:hover {
+          background: #29485B;
+          transition: 0.3s ease;
+          -moz-transition: 0.3s ease;
+          -webkit-transition: 0.3s ease; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses ul.nav.nav-stacked > li > a > img {
+          margin-right: 10px;
+          max-width: 24px;
+          max-height: 18px; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses ul.nav.nav-stacked > li > a .mat-icon {
+          float: right; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses ul.nav.nav-stacked > li.active > a {
+        background: #29485B; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .sub-categories ul.nav.nav-stacked {
+      margin-left: -15px;
+      text-indent: 15px; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .sub-categories ul.nav.nav-stacked li {
+        border-top: 1px solid #29485B;
+        margin: 0; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .sub-categories ul.nav.nav-stacked > li > a {
+        padding: 15px 0; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .tab-content {
+      float: left; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .tab-content .provider-linux {
+        padding-top: 25px; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .tab-content .section {
+        padding: 0;
+        overflow: auto;
+        text-align: left; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .tab-content .section .tab-content {
+          float: none; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .tab-content .section a {
+          display: block;
+          color: #FFFFFF;
+          padding: 5px; }
+          header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .tab-content .section a.see-all {
+            color: #1BB398;
+            text-decoration: underline; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses .tab-content .section .sub-categories ul {
+          list-style: none;
+          font-size: 16px;
+          padding: 0;
+          border-right: 1px solid #29485B; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course {
+      border-top: 1px solid #29485B;
+      margin: 0;
+      display: block;
+      float: none; }
+      header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a,
+      header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:link,
+      header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:visited {
+        color: #FFFFFF; }
+        header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:hover, header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:focus, header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:active,
+        header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:link:hover,
+        header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:link:focus,
+        header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:link:active,
+        header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:visited:hover,
+        header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:visited:focus,
+        header#linuxacademy-header #secondary-nav .custom-course-nav li.nav-item.popular-course a:visited:active {
+          background: #29485B; }
+
+/* Modals */
+.modal-body h4 {
+  font-weight: 600; }
+.modal-body label {
+  font-size: 18px;
+  font-weight: normal; }
+  .modal-body label input[type="radio"] {
+    margin-right: 5px; }
+.modal-body textarea {
+  width: 100%; }
+.modal-body .form-control {
+  border-color: #29485B;
+  font-size: 16px;
+  margin-bottom: 15px; }
+.modal-body input[type="submit"],
+.modal-body button[type="submit"], .modal-body .btn {
+  background: #1BB398;
+  color: #FFFFFF; }
+
+.cancel {
+  background: #1BB398;
+  color: #FFFFFF; }
+
+#gemModal .modal-body {
+  color: #878787; }
+  #gemModal .modal-body .col-md-3 {
+    text-align: center;
+    padding-right: 0; }
+  #gemModal .modal-body img {
+    display: block;
+    margin: 0 auto; }
+#gemModal .btn-gems {
+  background-color: #F8931E;
+  margin-right: 8px; }
+#gemModal button.cancel {
+  background-color: #1BB398; }
+#gemModal button.cancel, #gemModal .btn-gems {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 0;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 12px;
+  text-decoration: none; }
+
+.badge {
+  background-color: #29485B; }
+
+.dropdown-la.pull-right {
+  margin-left: 24px; }
+
+.popover {
+  background: rgba(24, 43, 55, 0.85);
+  color: #FFFFFF; }
+
+.popover.bottom > .arrow:after {
+  border-bottom-color: rgba(24, 43, 55, 0.85); }
+
+.dropdown-menu {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  padding: 0;
+  margin: 0; }
+
+.modal-content {
+  border: 10px solid rgba(0, 0, 0, 0.4); }
+
+/* Animations */
+@-webkit-keyframes nudge {
+  0%,
+	20%,
+	40%,
+	60%,
+	80%,
+	100% {
+    -webkit-transform: translateY(0); }
+  50% {
+    -webkit-transform: translateX(-5px); } }
+@keyframes nudge {
+  0%,
+	20%,
+	40%,
+	60%,
+	80%,
+	100% {
+    transform: translateY(0); }
+  50% {
+    transform: translateX(-5px); } }
+header#linuxacademy-header #secondary-nav .custom-course-nav .popular-courses ul.nav.nav-stacked > li > a .mat-icon {
+  position: absolute;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  bottom: 10px;
+  right: 15px;
+  -webkit-animation-name: nudge;
+  animation-name: nudge; }
+
+.free-community-nav-link {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  z-index: 1; }
+
+.free-community-nav-link i {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 22px; }
+
+.custom-tip-container .tooltip {
+  width: 338px; }
+
+.tooltip-inner {
+  max-width: 100%; }
+
+.tooltip-inner {
+  background: white;
+  color: black;
+  font-size: 16px;
+  text-align: left;
+  border-left: 5px solid #d7bb8e;
+  /* border: 1px solid orange; */
+  /* border-left: 5px solid orange; */
+  padding: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  border-color: #e5e5e5;
+  border-left: 5px solid #d7bb8e; }
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #FFFFFF; }
+
+span.free-trial {
+  font-size: 14px;
+  color: #d7bb8e;
+  margin: 0px 0px -20px 6px;
+  top: 4px;
+  position: relative;
+  display: inline-block; }
+
+.brand-upgrade-btn a {
+  background: #1BB398;
+  color: white !important;
+  display: block;
+  border-radius: 3px;
+  padding: 1px 12px 2px 12px;
+  font-size: 16px; }
+
+.dropdown.pull-right.brand-upgrade-btn {
+  margin-left: 50px; }
+
+#notificationModal {
+  /* Vertically align modal */
+  text-align: center; }
+  #notificationModal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; }
+  #notificationModal .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle; }
+  #notificationModal .modal-content {
+    border: 0;
+    padding-left: 100px; }
+    #notificationModal .modal-content:before {
+      content: "\f059";
+      font: normal normal normal 1em FontAwesome;
+      display: inline-block;
+      font-size: 5em;
+      -webkit-font-smoothing: antialiased;
+      transform: translate(0, 0);
+      color: #1bb398;
+      position: absolute;
+      left: 25px;
+      top: 20px; }
+  #notificationModal .modal-header {
+    border: 0; }
+  #notificationModal .modal-footer {
+    margin-left: -100px; }
+  #notificationModal h4.modal-title {
+    font-size: 18px;
+    font-weight: bold; }
+  #notificationModal .modal-body {
+    font-size: 18px;
+    line-height: 27px; }
+    #notificationModal .modal-body a:hover {
+      color: #1BB398; }
+  #notificationModal button.btn-primary {
+    background: #1BB398;
+    border-color: #1BB398;
+    font-size: 16px; }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .visible-sm {
+    display: block !important; }
+
+  .hidden-sm {
+    display: none !important; } }
+@media (max-width: 1200px) and (min-width: 992px) {
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs li img {
+    max-width: inherit;
+    width: 31px; } }
+@media (min-width: 992px) {
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li.col-md-1 {
+    padding: 0; }
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(2) {
+    width: 6.333333%; }
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(3) {
+    width: 6.333333%; }
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(4) {
+    width: 6.333333%; }
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(5) {
+    width: 11.333333%; }
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(6) {
+    width: 6.333333%; }
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(9) {
+    width: 9.333333%; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(9) img {
+      width: 28px; }
+  header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(10) {
+    width: 9.333333%; }
+    header#linuxacademy-header #secondary-nav .custom-course-nav .nav-tabs#course-categories li:nth-child(10) img {
+      width: 33px; } }
+@media (min-width: 1200px) {
+  header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li > a {
+    padding: 20px 32px;
+    font-size: 16px; }
+    header#linuxacademy-header #secondary-nav .main-nav .nav-la-main.nav-tabs > li > a.labs-nav-extra-padding {
+      padding: 20px 30px; } }
+
+/*# sourceMappingURL=styles.bundle.css.map */

@@ -1,0 +1,61 @@
+CloudFront:
+=============
+- Its a (CDN) content delivery network service. Delivers the content from the edge location instead of from origin.
+- Docs are cached and next time we request, it will get the docs from the edge location where docs are cached.
+- Cloudfront distribution (web or RTMP)
+  - define origin for content.
+  - integrate with route 53 for alternate CNAME
+  - cache behaviour
+    - path pattern ( images/*.jpg)
+    - min, max , default ttl
+    - query string forwarding and caching
+    - HTTP methods.
+- Updating Cached files:
+  - caching is done based off the cache keys
+  - in order to serve the new version of the object , either create new object with new name or create an "invalidation" on the CloudFront
+    distribution based on the object name.
+  - "invalidation" can be costly.
+  - set TTL=0
+
+CloudFront Origin:
+  - "origin" location is the source of the Content
+  - origin can be s3, elb , any http endpoint.
+  - live video streaming
+  - rtmp distribution (flash media files)
+  - data trasfer from s3 to cloudfront is free.
+
+CloudFront Security :
+======================
+- SSL certificate
+- END to END HTTPS
+- AWS WAF integration
+- Distribute private Content
+  - S3
+    - Limit access to Origin Access Identity
+  - Signed URL or Signed cookie
+    - Expiration
+    - Restrict by IP
+    - Trusted Signers
+- GeoRestriction
+
+CloudFront Performance:
+=========================
+
+- Regional caches
+  - Save content ejected from cache close to edge location
+- Point entire domain to Cloudfront to speed up dynamic Content
+  - connection optimization
+  - dynamic objects are still cached.
+
+- Cloudfront performance can still be affected by
+  - file size and type of files
+  - having to remake the request from edge location to origin.
+    - download the object from origin will take time.
+    - as well as writing it to cache and respond to the user.
+    - more request to origin, higher the load on your source.
+  - Query strings reduce cache "hits"
+    - it reduce the performance because query strings are often unique so it reduces the cache hits and also requires extra "work" in order
+      to forward to the origin location.
+
+- Cloudfront performance can be increased by:
+  - longer cache period will increase the performance.

@@ -3,6 +3,13 @@ SQS:
   - queues stores messages that travel between different component of application.
   - components are loosely coupled for high availability, reliability and scalability.
   - protection against loosing data on application failure.
+  - message between servers are retrieved through polling.
+
+SQS offers two types of queues:
+- Standard queues:
+  - guaranteed delivery of each message at least once but does not guaranted the order in which they deliver.
+- FIFO queue:
+  - deliver in the order of operation and events. Limited to 3000 transaction per second. Exactly once processing.
 
 SQS <- pulling mechanism
 SNS <- push mechanism
