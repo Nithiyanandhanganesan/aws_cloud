@@ -190,5 +190,5 @@ Conditional Writes:
  - helps coordinates writes
  - check for condition before proceeding with the operation.
  - supported for putitem, deleteitem, updateitem.
- - specify condiditon in "ConditionalExpressions" ( contain attributes names, conditional operators and built in functions)
+ - specify condition in "ConditionalExpressions" ( contain attributes names, conditional operators and built in functions)
  - failed conditional write returns "ConditionalCheckFailedException"

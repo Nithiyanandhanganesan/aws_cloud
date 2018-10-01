@@ -64,6 +64,7 @@ Storage Gateway:
     - Gateway stored volume
   File Gateway
     - local nfs . object stored and retrievable in s3
+    - only way to access objects in s3.
   Tape Gateway
     - emulates industry standata iSCSI-based virtual tape library
     - Common  backup application.

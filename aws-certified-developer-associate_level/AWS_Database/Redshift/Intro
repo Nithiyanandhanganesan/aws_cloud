@@ -7,10 +7,11 @@ Redshift:
 - OLAP not for OLTP.
 - column based storage.
 - It has leader node to which we can submit our queries.
-- data is stored in compute node.
+- data is stored in compute node. processing runs in compute node.
+- result return to the leader node.
 - any jdbc connection to postgres can be used for connecting to redshift. eg(tableau, amazon quicksight)
 - using amazon quicksight we can query redshift, DynamaDB etc.,
-- spectrum
+- redshift spectrum
     - query unstructured data stored in s3 buckets
     - query exabytes of data in few minutes.
 - scalable.

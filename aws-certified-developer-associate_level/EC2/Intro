@@ -101,7 +101,7 @@ Bootstrapping & user data
    - User data
        - step/section during the EC2 instance creation process where we can include our custom commands.
        - to view the user data in ec2 instance, enter the following commands
-            curl http://160.12.12.12/latest/user-data/
+            curl http://160.12.12.12/latest/user-data/  (it will return the bootstrap script)
             curl http://160.12.12.12/latest/meta-data/
 
 EC2 Storage Options:
@@ -126,23 +126,23 @@ EC2 Storage Options:
         - Operations greater than 256KB as divided into individual 256kb chunks.
      - EBS Types:
         - SSD
-           - general purpose
+           - general purpose (gp1)
               - use for dev environment
               - baseline performance 3 IOPS/Gib
               - Bursts upto 3000 IOPS
               - volume size 1Gib to 1TiB
-           - Provisioned IOPS SSD
+           - Provisioned IOPS SSD (io1)
               - used for mission critical applications
               - volume size 4Gib to 16TiB
               - upto 32000 IOPS per volume
               - ec2 instance can have max of 80000 IOPS total.
         - Hard Disk Drives
-           - Throughput Optimised
+           - Throughput Optimised (st1)
               - low storage cost.
               - volume size 500Gib - 16TiB
               - Max Throughput of 500 MiB/s
               - ec2 have max Throughput of 1750 MiB/s
-           - Coldest HDD
+           - Coldest HDD (Sc1)
               - Lowest cost.
               - volume size 500Gib - 16 tib
               - max Throughput of 250 MiB/s
@@ -175,12 +175,13 @@ Key pair:
 
 EBS Snapshots:
 ================
-- Snapshots are incremental in nature.
+- Snapshots are incremental in nature. only delta will be added to the snapshots.
 - used to create custom ami's.
 - recommended to take snapshot frequently.
 - data in memory will not be written to snapshot.
 - fsfreeze to stop writes and issue snapshot command to start the snapshot.
 - EC2 -> Elastic block store -> volume -> actions -> create snapshots
+- we can schedule the snapshot
 
 EC2 Placement groups:
 =======================

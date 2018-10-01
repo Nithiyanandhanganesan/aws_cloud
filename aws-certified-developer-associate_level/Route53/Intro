@@ -55,7 +55,7 @@ Route 53 Record Sets:
   - Simple : route traffic to one endpoints
   - Weighted: route traffic to multiple Endpoints
   - Latency : route traffic to end point based on the user latency to various Endpoints
-  - Failover : route traffic to "secondary" endpoint when "primary" is not availble.
+  - Failover : route traffic to "secondary" endpoint when "primary" is not available.
   - Geolocation: route traffic to endpoint based on the geo location.
 
 - Evaluate health check

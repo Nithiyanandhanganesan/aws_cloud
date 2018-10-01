@@ -1,7 +1,7 @@
 Elastic load balancing:
 ========================
 
-- managed service to distrubute traffic across instance/servers.
+- managed service to distribute traffic across instance/servers.
 - automates the process of distributing the incoming traffic to all instance associates with the ELB.
 - Cross zone load balancing
      - balance traffic across multiple availability zones.
@@ -43,7 +43,7 @@ Serving traffic to and from private subnets:
 - if some wants to hit particular host, using ELB its not possible . because it redirect the request based on the rule.
   in that case, we have to user "Bastion Host"
 
-Bastion Host:
+Bastion Host:(inbound)
 ------------------
 - bastion host is an ec2 instance that lives in a public subnet and is used as a "gateway" for traffic that is destined for instance that lives
   in private subnets.
@@ -53,7 +53,7 @@ Bastion Host:
 
 - if we want to download patch to host in private subnet, then we have to user "NAT(network address translator) Gateway"
 
-NAT Gateway:
+NAT Gateway:(outbound)
 ------------------
 - designed to provide ec2 instance that live in a private subnet with a route to internet.
 - NAT gateway prevent any host outside of VPC from initiating the connection with instance.
@@ -70,7 +70,7 @@ Gateway Endpoints:
   - eg: S3, DynamoDB
 Interface Endpoints:
   - cloudwatch logs, CodeBuild, KMS, Kinesis, service catalog
-  - nodes in private subnet , connect to s3 using this endpoints.
+  - nodes in private subnet , connect to public/s3 using this endpoints instead of routing through NAT gateway.
 
 AutoScaling:
 ===================

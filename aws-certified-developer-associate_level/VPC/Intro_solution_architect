@@ -9,7 +9,7 @@ types of subnets
        - does not have direct route to internet
    - public
        - have direct route to internet
-       - eg: web application will be launched in public whereas db for that application will be launched in private subnet.
+       - eg: web application will be launched in public whereas db for that database will be launched in private subnet.
 
 - another internet gateway types is virtual private gateway. we can make our hardware to be used and connect to your vpc.
 - vpc is regional network.
