@@ -1,0 +1,3009 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Linux Academy</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.82">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 22.0px; font: 16.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 16.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 5.0px 0.0px; line-height: 20.0px; font: 14.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #29485b; min-height: 17.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 22.0px; font: 16.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff; min-height: 20.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 24.0px; font: 17.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #1eb398}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px Omnes; color: #333333; -webkit-text-stroke: #333333; background-color: #113e57; min-height: 17.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 26.0px; font: 18.2px Omnes; color: #333333; -webkit-text-stroke: #333333}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px Omnes; color: #333333; -webkit-text-stroke: #333333}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 14.0px Omnes; color: #adadad; -webkit-text-stroke: #adadad}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 40.0px; font: 16.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 40.0px; font: 16.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff; min-height: 22.0px}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 40.0px; font: 16.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #000000; background-color: rgba(0, 0, 0, 0.12); min-height: 22.0px}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 26.0px; font: 24.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 26.0px; font: 24.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #30485a}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 36.0px; font: 14.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #54b099}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 36.0px; font: 14.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; min-height: 17.0px}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 36.0px; font: 14.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #000000; background-color: rgba(0, 0, 0, 0.12); min-height: 17.0px}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585; background-color: #ffffff}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.87); -webkit-text-stroke: rgba(0, 0, 0, 0.87)}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 40.0px; font: 16.0px Omnes; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #1cb398}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.87); -webkit-text-stroke: rgba(0, 0, 0, 0.87); min-height: 16.0px}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 23.0px; font: 16.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585; min-height: 19.0px}
+    p.p29 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 22.0px; font: 22.0px 'Material Icons'; color: #858585; -webkit-text-stroke: #858585; background-color: #f7f7f7}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Omnes; color: #858585; -webkit-text-stroke: #858585; min-height: 17.0px}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Omnes; color: #858585; -webkit-text-stroke: #858585; background-color: #000000; background-color: rgba(0, 0, 0, 0.12); min-height: 17.0px}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585; min-height: 29.0px}
+    p.p41 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 11.0px Omnes; color: #333333; -webkit-text-stroke: #333333; min-height: 14.0px}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 11.0px Times; color: #333333; -webkit-text-stroke: #333333; background-color: #777777}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 40.0px; font: 11.4px '.AppleSystemUIFont'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 12.0px; font: 12.0px Times; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 14.8px; font: 11.4px '.AppleSystemUIFont'; color: #666666; -webkit-text-stroke: #666666; background-color: #edeeef}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 12.0px; font: 12.0px '.AppleSystemUIFont'; color: #a1a7ac; -webkit-text-stroke: #a1a7ac}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 12.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.8px; font: 12.0px '.AppleSystemUIFont'; color: #000000; -webkit-text-stroke: #000000}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 11.4px '.AppleSystemUIFont'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 10.0px; font: 10.2px '.AppleSystemUIFont'; color: #888f95; -webkit-text-stroke: #888f95}
+    li.li30 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 20.0px; font: 16.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.87); -webkit-text-stroke: rgba(0, 0, 0, 0.87)}
+    li.li31 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 20.0px; font: 16.0px 'Helvetica Neue'; color: #52b979; -webkit-text-stroke: #52b979}
+    li.li35 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 20.0px; font: 16.0px 'Helvetica Neue'; color: #4894b5; -webkit-text-stroke: #4894b5}
+    li.li36 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 20.0px; font: 16.0px 'Helvetica Neue'; color: #ff212b; -webkit-text-stroke: #ff212b}
+    li.li38 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 16.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.87); -webkit-text-stroke: rgba(0, 0, 0, 0.87)}
+    li.li39 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 16.0px 'Helvetica Neue'; color: #4894b5; -webkit-text-stroke: #4894b5}
+    li.li40 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 16.0px 'Helvetica Neue'; color: #52b979; -webkit-text-stroke: #52b979}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; background-color: #182b37}
+    span.s3 {font-kerning: none; background-color: #29485b}
+    span.s4 {font-kerning: none; background-color: #1bb398}
+    span.s5 {font-kerning: none; background-color: #ffffff}
+    span.s6 {font: 24.0px 'Material Icons'; font-kerning: none; background-color: #ffffff}
+    span.s7 {font-kerning: none; background-color: #1cb398}
+    span.s8 {background-color: #f7f7f7; -webkit-text-stroke: 0px #000000}
+    span.s9 {font-kerning: none; background-color: #f7f7f7}
+    span.s10 {background-color: #f5fbf8; -webkit-text-stroke: 0px #000000}
+    span.s11 {font-kerning: none; background-color: #f5fbf8}
+    span.s12 {font: 24.0px 'Material Icons'; font-kerning: none; background-color: #f5fbf8}
+    span.s13 {color: rgba(0, 0, 0, 0.87); background-color: #f5fbf8; -webkit-text-stroke: 0px #000000}
+    span.s14 {font-kerning: none; color: rgba(0, 0, 0, 0.87); background-color: #f5fbf8; -webkit-text-stroke: 0px rgba(0, 0, 0, 0.87)}
+    span.s15 {font-kerning: none; color: rgba(0, 0, 0, 0.87); -webkit-text-stroke: 0px rgba(0, 0, 0, 0.87)}
+    span.s16 {font: 24.0px 'Material Icons'; font-kerning: none; color: #52b979; background-color: #f5fbf8; -webkit-text-stroke: 0px #52b979}
+    span.s17 {font-kerning: none; color: #52b979; background-color: #f5fbf8; -webkit-text-stroke: 0px #52b979}
+    span.s18 {font-kerning: none; color: #52b979; -webkit-text-stroke: 0px #52b979}
+    span.s19 {font: 24.0px 'Material Icons'; font-kerning: none}
+    span.s20 {color: #ff212b; background-color: #fef4f4; -webkit-text-stroke: 0px #000000}
+    span.s21 {font-kerning: none; color: #ff212b; background-color: #fef4f4; -webkit-text-stroke: 0px #ff212b}
+    span.s22 {font-kerning: none; color: #ff212b; -webkit-text-stroke: 0px #ff212b}
+    span.s23 {font: 24.0px 'Material Icons'; font-kerning: none; color: #ff212b; background-color: #fef4f4; -webkit-text-stroke: 0px #ff212b}
+    span.s24 {font: 24.0px 'Material Icons'; font-kerning: none; background-color: #fef4f4}
+    span.s25 {font-kerning: none; background-color: #fef4f4}
+    span.s26 {background-color: #fef4f4; -webkit-text-stroke: 0px #000000}
+    span.s27 {font: 24.0px 'Material Icons'; font-kerning: none; color: #4894b5; background-color: #fef4f4; -webkit-text-stroke: 0px #4894b5}
+    span.s28 {font: 24.0px 'Material Icons'; font-kerning: none; color: #4894b5; -webkit-text-stroke: 0px #4894b5}
+    span.s29 {font-kerning: none; color: #4894b5; background-color: #fef4f4; -webkit-text-stroke: 0px #4894b5}
+    span.s30 {font-kerning: none; color: #4894b5; -webkit-text-stroke: 0px #4894b5}
+    span.s31 {font: 21.6px Menlo; font-kerning: none; color: #c7254e; background-color: #f9f2f4; -webkit-text-stroke: 0px #c7254e}
+    span.s32 {font: 24.0px 'Material Icons'; font-kerning: none; color: #4894b5; background-color: #f5fbf8; -webkit-text-stroke: 0px #4894b5}
+    span.s33 {font-kerning: none; color: #4894b5; background-color: #f5fbf8; -webkit-text-stroke: 0px #4894b5}
+    span.s34 {-webkit-text-stroke: 0px #000000}
+    span.s35 {color: #ff212b; -webkit-text-stroke: 0px #000000}
+    span.s36 {color: rgba(0, 0, 0, 0.87); -webkit-text-stroke: 0px #000000}
+    span.s37 {font: 14.3px '.AppleSystemUIFont'; font-kerning: none; color: #ffffff; -webkit-text-stroke: 0px #ffffff}
+    span.s38 {font-kerning: none; background-color: #777777}
+    ul.ul1 {list-style-type: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"><a href="https://linuxacademy.com/cp"><img src="file:///la-logo-white.png" alt="la-logo-white.png"><span class="s2"><span class="Apple-converted-space"> </span></span></a></span></p>
+<p class="p1"><span class="s2">contact.skillvoice@gmail.com<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s2">Support<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s2"><a href="https://linuxacademy.com/blog/linuxacademy-com/new-hands-on-training-content-150-recap/">Summer Content Releases<span class="Apple-converted-space"> </span><span class="s1"></span></a></span></p>
+<p class="p2"><span class="s3">55<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">221 </span><span class="s1"><object data="file:///ruby.svg">ruby.svg</object></span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s4">Navigation<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1">Hey! Please take a moment to confirm your email. Click here to get an email or check the link in your welcome email.<span class="Apple-converted-space"> </span></span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p7"><span class="s5">61.54%</span></p>
+<h1 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 39.0px; font: 36.0px Omnes; color: #333333; -webkit-text-stroke: #333333"><span class="s5">Great Start!</span></h1>
+<p class="p9"><span class="s5">You did not pass the challenge on this attempt. This challenge is now locked and can be unlocked by using gems or by completing all of the recommended activities.<span class="Apple-converted-space"> </span></span></p>
+<p class="p10"><span class="s6">lock</span><span class="s5"> This challenge is now locked.<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s7">Unlock    </span><span class="s1"><object data="file:///ruby.svg">ruby.svg</object></span><span class="s7"> 0</span></p>
+<p class="p12"><span class="s1"></span><br></p>
+<p class="p13"><span class="s1"></span><br></p>
+<p class="p14"><span class="s1"><object data="file:///la-logo-white.svg">la-logo-white.svg</object></span></p>
+<p class="p15"><span class="s1">Linux Academy</span></p>
+<p class="p16"><span class="s1">Back to Lesson</span></p>
+<p class="p17"><span class="s1"></span><br></p>
+<p class="p18"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.87); -webkit-text-stroke: rgba(0, 0, 0, 0.87)"><span class="s5">Report Card</span></h3>
+<p class="p20"><span class="s5">Expectations</span></p>
+<p class="p21"><span class="s1">Score</span></p>
+<p class="p22"><span class="s5">1. Demonstrate an understanding of the design principles and best practices of the Operation Excellence Pillar</span></p>
+<p class="p22"><span class="s5">46.15 %</span></p>
+<p class="p22"><span class="s5">2. Demonstrate understanding of the Design Principles and Best Practices of the Reliability pillar</span></p>
+<p class="p22"><span class="s5">61.54 %</span></p>
+<p class="p22"><span class="s5">3. Demonstrate an understanding of the Design Principles and Best Practices of the Security pillar</span></p>
+<p class="p22"><span class="s5">69.23 %</span></p>
+<p class="p22"><span class="s5">4. Demonstrate an understanding of the Design Principles and Best Practices of the Performance Efficiency pillar</span></p>
+<p class="p22"><span class="s5">53.85 %</span></p>
+<p class="p22"><span class="s5">5. Demonstrate an understanding of the Design Principles and Best Practices of the Cost Optimization Pillar</span></p>
+<p class="p22"><span class="s5">69.23 %</span></p>
+<h3 style="margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.0px; font: 18.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">Next Challenge:</span></h3>
+<p class="p22"><span class="s1"><img src="file:///badge-5caeb628-3a51-4ab4-81fa-bf17806c22ec.png" alt="badge-5caeb628-3a51-4ab4-81fa-bf17806c22ec.png"></span></p>
+<h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 19.0px; font: 18.0px 'Helvetica Neue'; color: #1eb398; -webkit-text-stroke: #1eb398"><span class="s5"><b>High Availability, Fault Tolerance, and Scalability</b></span></h4>
+<p class="p25"><span class="s1">View Challenge</span></p>
+<p class="p12"><span class="s1"></span><br></p>
+<p class="p13"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.0px; font: 18.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">Check out a Learning Activity</span></h3>
+<p class="p26"><span class="s1"></span><br></p>
+<p class="p22"><span class="s1"><img src="file:///badge-1b522849-dd33-43e4-90ba-4d10a3319a96.png" alt="badge-1b522849-dd33-43e4-90ba-4d10a3319a96.png"></span></p>
+<p class="p26"><span class="s1"></span><br></p>
+<p class="p22"><span class="s1"><img src="file:///badge-307a898a-dc4c-4364-b384-130bd8efeff2.png" alt="badge-307a898a-dc4c-4364-b384-130bd8efeff2.png"></span></p>
+<p class="p22"><span class="s1"><img src="file:///badge-4e8fbb01-25aa-455f-bb1a-364aae8a5c5a.png" alt="badge-4e8fbb01-25aa-455f-bb1a-364aae8a5c5a.png"></span></p>
+<p class="p22"><span class="s1"><img src="file:///badge-8cc9b5a5-9b93-4d97-95d6-277653ac7949.png" alt="badge-8cc9b5a5-9b93-4d97-95d6-277653ac7949.png"></span></p>
+<p class="p22"><span class="s1"><img src="file:///badge-d5a0a565-5925-4fdd-8192-b59c93f4e3a6.png" alt="badge-d5a0a565-5925-4fdd-8192-b59c93f4e3a6.png"></span></p>
+<p class="p22"><span class="s1"><img src="file:///badge-e907e3ec-1021-4208-8bb4-04ddfd99280d.png" alt="badge-e907e3ec-1021-4208-8bb4-04ddfd99280d.png"></span></p>
+<p class="p26"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 33.0px; font: 30.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.87); -webkit-text-stroke: rgba(0, 0, 0, 0.87)"><span class="s5">Exam Breakdown</span></h2>
+<h4 style="margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.0px; font: 18.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">Demonstrate an understanding of the design principles and best practices of the Operation Excellence Pillar</span></h4>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">1.</span></h3>
+<p class="p29"><span class="s5">You have inherited a VPC which has a CIDR of 10.0.0.0/16. You need to design a subnet layout which allows for four availability zones to be used. Which option below is valid for this criteria? Pick the one which uses the least number of subnets to decrease management overhead.</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li30"><span class="s8"></span><span class="s9">A. Create a single subnet, 10.0.0.0/16, which spans all four availability zones.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li31"><span class="s10"></span><span class="s11">B. Create four subnets: 10.0.0.0/24, 10.0.1.0/24, 10.0.2.0/24 and 10.0.3.0/24, and put each one in its own availability zone.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. Create two subnets, 10.0.0.0/24 and 10.0.1.0/24, and set each subnet in an HA configuration. Set each subnet to use two of the four availability zones.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">D. Create four subnets, all using the 10.0.0.0/16 range, and put each subnet into its own availability zone.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">2.</span></h3>
+<p class="p29"><span class="s5">What steps are required to allow an EC2 instance to access the internet while being as secure as possible? Assume all security rules/ACL's and subnets are in place already. (Choose all that apply)</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li31"><span class="s10"></span><span class="s11">A. Create a default route from the EC2 instance's subnet to the NAT Gateway.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li35"><span class="s13"></span><span class="s14">B. Add a NAT gateway </span><span class="s15"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b></span><span class="s11">This is required to allow a private instance to have internet access.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li31"><span class="s10"></span><span class="s11">C. Attach an internet gateway to the VPC.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li35"><span class="s13"></span><span class="s14">D. Create a default route from the NAT gateway's subnet to the Internet Gateway.</span><span class="s15"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b></span><span class="s11">This is required in order to allow the NAT gateway to have internet access.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li35"><span class="s20"></span><span class="s21">E. Provide the instance with a Public or Elastic IP address.</span><span class="s22"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b></span><span class="s25">This is only needed for incoming access, which isn't a requirement.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li36"><span class="s26"></span><span class="s25">F. Create a default route from the EC2 instance's subnet to the internet gateway.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s24">close</span><span class="s25"><b> Your Answer </b></span><span class="s1"><b><br>
+</b></span><span class="s27">forum</span><span class="s28"><br>
+</span><span class="s29"><b>Why is this incorrect?</b></span><span class="s30"><b><br>
+</b></span><span class="s29">This is only needed if incoming access is required.</span><span class="s30"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s25"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">3.</span></h3>
+<p class="p29"><span class="s5">You are consulting for a finance company that has specific backup and archiving policies. Financial documents for the past six months may need to be accessed frequently. You need to configure a setup that automatically sends any documents that are older than six months to a lower-cost, but highly durable, environment for archiving. Given that the company is using a Storage Gateway in File Gateway configuration, which of the following would be the best setup to reach the objectives?</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li30"><span class="s8"></span><span class="s9">A. Enable versioning on the S3 connected bucket to the Gateway Storage configuration.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">B. Enable an S3 lifecycle policy to send all objects added to the bucket immediately to Glacier</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. Enable an S3 lifecycle policy to integrate into Amazon EBS for a good backup solution.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li31"><span class="s10"></span><span class="s11">D. Enable S3 versioning with a lifecycle policy that sends objects older than six months to Amazon Glacier</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">4.</span></h3>
+<p class="p29"><span class="s5">Which of the following AWS storage services are able to be natively <i>mounted</i> as mount points on a Linux system.<span class="Apple-converted-space"> </span></span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li35"><span class="s20"></span><span class="s21">A. EBS and Instance Store only</span><span class="s22"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b></span><span class="s25">EFS can also be mounted.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">B. Glacier, Instance Store, and EBS</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li35"><span class="s13"></span><span class="s14">C. Instance Store, EBS, and EFS</span><span class="s15"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b></span><span class="s11">Instance Store, EBS and EFS are all capable of being mounted to EC2 instances. Using EFS (NFS) is not currently supported on windows instance.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">D. Instance Store, EBS, S3, Glacier, and EFS</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">5.</span></h3>
+<p class="p29"><span class="s5">You business operates in a very security sensitive industry. You are looking at how to secure a small VPC. Your environment consists of a single S3 bucket, and an EC2 instance running in a internet connected VPC. What is the best way to lock down the environment, allowing access to S3 but keeping the environment as secure as possible?</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li30"><span class="s8"></span><span class="s9">A. Create an S3 VPC endpoint. Apply a policy restricting access to the S3 bucket from the VPC endpoint.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">B. Provision a private VPC based S3 bucket. Migrate the contents of the public bucket and update the application. Remove the internet gateway to isolate the VPC.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li35"><span class="s13"></span><span class="s14">C. Create an S3 VPC endpoint. Apply a policy restricting access to the S3 bucket from the VPC endpoint, and remove the internet gateway.</span><span class="s15"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b></span><span class="s11">This is ideal. A VPC endpoint doesn't require an internet gateway. It allows access to S3 which is a public service from a VPC.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li36"><span class="s26"></span><span class="s25">D. Create a new security group, denying all IP's except the EC2 instance, and associate it with the S3 bucket.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s24">close</span><span class="s25"><b> Your Answer </b></span><span class="s1"><b><br>
+</b></span><span class="s27">forum</span><span class="s28"><br>
+</span><span class="s29"><b>Why is this incorrect?</b></span><span class="s30"><b><br>
+</b></span><span class="s29">Security groups cannot DENY, and a security group cannot be associated with S3.</span><span class="s30"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s25"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">6.</span></h3>
+<p class="p29"><span class="s5">Currently, you're helping with the design and architect a highly-available application. After building the initial environment, you've found that part of your application does not work correctly until port 443 is added to the security group. After adding port 443 to the appropriate security group, how much time will it take before the changes are applied and the application begins working correctly?</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li30"><span class="s8"></span><span class="s9">A. Generally, it takes 2-5 minutes for the rules to propagate .</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">B. It will take 60 seconds for the rules to apply to all Availability Zones within the region.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. Immediately after a reboot of the EC2 instances belong to that security group</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li31"><span class="s10"></span><span class="s11">D. Changes apply instantly to the security group, and the application should be able to immediately respond to 443 requests.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">7.</span></h3>
+<p class="p29"><span class="s5">Which of the following EC2 metrics will NOT be automatically collected by CloudWatch?</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li35"><span class="s13"></span><span class="s14">A. The number of running processes on the instance</span><span class="s15"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b></span><span class="s11">This is only available from within the OS. A custom metric is required to push this to CloudWatch.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li35"><span class="s20"></span><span class="s21">B. Instance Store IOPS</span><span class="s22"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b></span><span class="s25">This is monitored and recorded automatically by default.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. T2 Credit Balance</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">D. CPU Utilization</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li31"><span class="s10"></span><span class="s11">E. Average Memory Utilization</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">8.</span></h3>
+<p class="p29"><span class="s5">CloudTrail is enabled in </span><span class="s31">us-east-1</span><span class="s5"> and you have a number of trails created for different teams. You notice duplicate events for IAM. How can you resolve this issue?</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li35"><span class="s13"></span><span class="s14">A. Disable logging global service events on all but one trail.</span><span class="s15"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b></span><span class="s11">Global service events are from global services such as IAM. Having this option enabled on more than one trail can cause duplicates. Disabling this option on all but one fixes this issue.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">B. Apply all Trails globally.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. Apply a cloudtrail folder using the CLoudTrail JSON editor.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li36"><span class="s26"></span><span class="s25">D. Use SQS + Lambda to remove duplicates.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s24">close</span><span class="s25"><b> Your Answer </b></span><span class="s1"><b><br>
+</b></span><span class="s27">forum</span><span class="s28"><br>
+</span><span class="s29"><b>Why is this incorrect?</b></span><span class="s30"><b><br>
+</b></span><span class="s29">This is not a valid approach.</span><span class="s30"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s25"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">9.</span></h3>
+<p class="p29"><span class="s5">Your business generates a large amount of financial data within its SQL-backed financial application. You have been asked to suggest an AWS product which will allow storage of that data to be used for long term reporting, querying, forecasting, and business intelligence. Which AWS product should you suggest?</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li30"><span class="s8"></span><span class="s9">A. Athena</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">B. Glacier</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. EMR</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li31"><span class="s10"></span><span class="s11">D. Redshift</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">10.</span></h3>
+<p class="p29"><span class="s5">As part of a project implementation, you need to block IP traffic from a subnet to a specific internet IP address. How can this be accomplished?</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li31"><span class="s10"></span><span class="s11">A. Attach a NACL to the subnet and add a DENY rule to it.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">B. Create a Security group, add a DENY rule to it, and attach to the subnet.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. Attach a NACL to the VPC and add a DENY rule.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">D. Create a Security group, add a DENY rule, and attach it to any resources in the subnet which need the DENY rule applied.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">11.</span></h3>
+<p class="p29"><span class="s5">Which of the following services allows an administrator access to the underlying operating system? (Choose all that apply)</span></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li30"><span class="s8"></span><span class="s9">A. DynamoDB</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li31"><span class="s10"></span><span class="s11">B. Amazon EC2</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. ElastiCache</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">D. Amazon RDS</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li31"><span class="s10"></span><span class="s11">E. Amazon EMR</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">12.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li31"><span class="s10"></span><span class="s11">A. Set an alarm for the metric that sends a notification to an SNS topic.</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li30"><span class="s10"></span><span class="s11">B. Create an SNS topic and subscribe the Create Ticket url for your Help Desk to the topic. </span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s32">forum</span><span class="s28"><br>
+</span><span class="s33"><b>Why is this correct?</b></span><span class="s30"><b><br>
+</b></span><span class="s33">You can subscribe HTTP and HTTPS endpoints to an SNS topic.</span><span class="s30"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s11"><br>
+</span></li>
+  <li class="li30"><span class="s8"></span><span class="s9">C. Use the Zen Desk plugin for CloudWatch</span><span class="s1"><br>
+<br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">13.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.0px; font: 18.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">Demonstrate understanding of the Design Principles and Best Practices of the Reliability pillar</span></h4>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">1.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">2.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">3.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">4.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">5.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">6.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">7.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">8.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">9.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">10.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">11.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">12.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">13.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.0px; font: 18.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">Demonstrate an understanding of the Design Principles and Best Practices of the Security pillar</span></h4>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">1.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">2.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">3.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">4.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">5.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">6.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">7.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">8.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">9.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">10.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">11.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">12.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">13.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.0px; font: 18.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">Demonstrate an understanding of the Design Principles and Best Practices of the Performance Efficiency pillar</span></h4>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">1.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">2.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">3.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">4.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">5.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">6.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">7.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">8.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">9.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">10.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">11.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">12.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">13.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.0px; font: 18.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">Demonstrate an understanding of the Design Principles and Best Practices of the Cost Optimization Pillar</span></h4>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">1.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">2.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">3.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">4.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">5.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">6.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">7.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">8.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">9.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">10.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">11.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">12.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li40"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s12">done</span><span class="s11"><b> Correct </b></span><span class="s1"><b><br>
+</b></span><span class="s11"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 26.0px; font: 24.0px 'Helvetica Neue'; color: #858585; -webkit-text-stroke: #858585"><span class="s5">13.</span></h3>
+<p class="p37"><span class="s1"></span><br></p>
+<p class="p28"><span class="s1"><b></b></span><br></p>
+<ul class="ul1">
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+  <li class="li39"><span class="s35"></span><span class="s22"><br>
+<br>
+<br>
+<br>
+</span><span class="s23">close</span><span class="s21"><b> Your Answer </b></span><span class="s22"><b><br>
+</b></span><span class="s24">forum</span><span class="s19"><br>
+</span><span class="s25"><b>Why is this incorrect?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s21"><br>
+</span></li>
+  <li class="li39"><span class="s36"></span><span class="s15"><br>
+<br>
+<br>
+<br>
+</span><span class="s16">done</span><span class="s17"><b> Correct </b></span><span class="s18"><b><br>
+</b></span><span class="s12">forum</span><span class="s19"><br>
+</span><span class="s11"><b>Why is this correct?</b></span><span class="s1"><b><br>
+</b><br>
+<br>
+<br>
+<br>
+</span><span class="s14"><br>
+</span></li>
+  <li class="li38"><span class="s34"></span><span class="s1"><br>
+<br>
+<br>
+<br>
+</span><span class="s9"><br>
+</span></li>
+</ul>
+<p class="p32"><span class="s1">thumb_up</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p32"><span class="s1">thumb_down</span></p>
+<p class="p33"><span class="s1"></span><br></p>
+<p class="p34"><span class="s1"></span><br></p>
+<p class="p41"><span class="s1"></span><br></p>
+<p class="p42"><span class="s1">Envelope Iconsmall picture of an envelope signifying email</span><span class="s37"><b>Contact us</b></span></p>
+<p class="p43"><span class="s38"><b>Contact us!</b></span></p>
+<p class="p44"><span class="s38">Arrow Downa small down arrow to minimize chat box</span></p>
+<p class="p45"><span class="s1">We're not around, but we'd love to chat another time. Leave us a message and we'll get back in touch as soon as we're able!</span></p>
+<p class="p46"><span class="s5">click here and type your Name</span></p>
+<p class="p47"><span class="s5">Required Asterisksignifies that this field can not be left blank</span></p>
+<p class="p46"><span class="s5">click here and type your Email</span></p>
+<p class="p47"><span class="s5">Required Asterisksignifies that this field can not be left blank</span></p>
+<p class="p48"><span class="s5">We're not around, but we'd love to chat another time. Leave us a message and we'll get back in touch as soon as we're able!</span></p>
+<p class="p47"><span class="s5">Required Asterisksignifies that this field can not be left blank</span></p>
+<p class="p49"><span class="s38">Send</span></p>
+<p class="p50"><span class="s5">Powered by Olark</span></p>
+</body>
+</html>
